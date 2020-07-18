@@ -1,0 +1,58 @@
+{
+  "nodes": [
+    {
+      "id": "Tadamir",
+      "group": 1
+    },
+    {
+      "id": "Jin",
+      "group": 1
+    },
+    {
+      "id": "Parmigianino",
+      "group": 1
+    },
+    {
+      "id": "Orveyl",
+      "group": 1
+    },
+    {
+      "id": "Bhavin",
+      "group": 1
+    },
+    {
+      "id": "Alba",
+      "group": 2
+    },
+    {
+      "id": "Smasher",
+      "group": 3
+    },
+    {
+      "id": "Laserbeam",
+      "group": 3
+    }
+  ],
+  "links": [
+    {
+      "source": "Jin",
+      "target": "Alba",
+      "value": 1
+    },
+    {
+      "source": "Parmigianino",
+      "target": "Smasher",
+      "value": 2
+    },
+    {
+      "source": "Smasher",
+      "target": "Laserbeam",
+      "value": 3
+    },
+    {
+      "source": "Bhavin",
+      "target": "Jin",
+      "value": 1
+    }
+  ]
+}

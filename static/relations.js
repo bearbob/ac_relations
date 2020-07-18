@@ -12,7 +12,7 @@
 
   let simulation, link, node, group, groupData, nest;
 
-
+  let color = d3.scaleOrdinal(d3.schemeCategory10);
   const canvas = {
     width: 1200,
     height: 800,
@@ -52,11 +52,6 @@
     }
   };
 
-  let color = d3.scaleOrdinal(d3.schemeCategory10);
-
-  // - - - - - - - - - -
-  // functions
-  // - - - - - - - - - -
   const setCanvas = function (contextSelector) {
     svg = d3.select(contextSelector)
       .append('svg')
@@ -102,8 +97,9 @@
   };
 
   function dragstarted(d) {
-    if (!d3.event.active) simulation.alphaTarget(0.3)
-      .restart();
+    if (!d3.event.active) {
+      simulation.alphaTarget(0.3).restart();
+    }
     d.fx = d.x;
     d.fy = d.y;
   }
@@ -114,7 +110,9 @@
   }
 
   function dragended(d) {
-    if (!d3.event.active) simulation.alphaTarget(0);
+    if (!d3.event.active) {
+      simulation.alphaTarget(0);
+    }
     d.fx = null;
     d.fy = null;
   }
@@ -146,13 +144,9 @@
   // - - - - - - - - - -
   setCanvas('#diagram');
 
-  d3.json('/data/miserables.json')
+  d3.json('/data/characters.json')
     .then(function (graph) {
 
-      // - - - - - - - - - -
-      // nesting data
-      // - - - - - - - - - -
-      // sort links by source (name)
       var graphLinksBySource = d3.nest()
         .key(function (d) {
           return d.source;
@@ -170,10 +164,9 @@
         .rollup(function (v) {
           return v.length;
         })
-        .object(graph.links); //.entries(graph.links);
+        .object(graph.links);
 
       console.log(graphLinksCount);
-      // - - - - - - - - - -
 
       simulation = d3.forceSimulation()
         .force('link', d3.forceLink()
@@ -186,12 +179,6 @@
           .strength(-100)
 
         )
-        // .force('charge', function () {
-        //   return d3.forceManyBody();
-        // })
-        // .force('charge', function (d) {
-        //   return graphLinksCount[d.id] / 10;
-        // })
         .force('center', d3.forceCenter(canvas.width / 2, canvas.height / 2));
 
       // building the links
