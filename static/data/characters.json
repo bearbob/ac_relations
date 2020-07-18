@@ -2,35 +2,58 @@
   "nodes": [
     {
       "id": "Tadamir",
-      "group": 1
+      "group": 1,
+      "value": "Spieler"
     },
     {
       "id": "Jin",
-      "group": 1
+      "group": 1,
+      "value": "Spieler"
     },
     {
       "id": "Parmigianino",
-      "group": 1
+      "group": 1,
+      "value": "Spieler"
     },
     {
       "id": "Orveyl",
-      "group": 1
+      "group": 1,
+      "value": "Spieler"
     },
     {
       "id": "Bhavin",
-      "group": 1
+      "group": 1,
+      "value": "Spieler"
     },
     {
       "id": "Alba",
-      "group": 2
+      "group": 2,
+      "value": "Test"
     },
     {
       "id": "Smasher",
-      "group": 3
+      "group": 3,
+      "value": "Test"
     },
     {
       "id": "Laserbeam",
-      "group": 3
+      "group": 3,
+      "value": "Test"
+    },
+    {
+      "id": "Loxxkatron",
+      "group": 4,
+      "value": "Test"
+    },
+    {
+      "id": "Gorev",
+      "group": 4,
+      "value": "Test"
+    },
+    {
+      "id": "Amanda",
+      "group": 4,
+      "value": "Test"
     }
   ],
   "links": [
@@ -52,6 +75,16 @@
     {
       "source": "Bhavin",
       "target": "Jin",
+      "value": 1
+    },
+    {
+      "source": "Amanda",
+      "target": "Gorev",
+      "value": 1
+    },
+    {
+      "source": "Loxxkatron",
+      "target": "Gorev",
       "value": 1
     }
   ]

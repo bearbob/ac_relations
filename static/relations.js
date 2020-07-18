@@ -1,18 +1,16 @@
-!(function () {
+(function () {
   'use strict';
 
+  //global vars
   let svg;
-  let xScale;
-  let yScale;
-  let w;
-  let h;
-  let tx;
-  let ty;
-  let f;
-
-  let simulation, link, node, group, groupData, nest;
-
+  let simulation;
+  let link;
+  let node;
+  let group;
+  let groupData;
+  let nest;
   let color = d3.scaleOrdinal(d3.schemeCategory10);
+
   const canvas = {
     width: 1200,
     height: 800,
@@ -60,41 +58,37 @@
       .attr('viewbox', canvas.viewbox.x + ' ' + canvas.viewbox.y + ' ' + canvas.viewbox.width + ' ' + canvas.viewbox.height)
   };
 
-  const setXScale = function () {
-    xScale = d3.scaleLinear()
-      .domain([scale.xAxis.domain.from, scale.xAxis.domain.to])
-      .range([scale.xAxis.range.start, scale.xAxis.range.end]);
-  };
+  var Tooltip = d3.select("#diagram")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px");
 
-  const setYScale = function () {
-    yScale = d3.scaleLinear()
-      .domain([scale.yAxis.domain.from, scale.yAxis.domain.to])
-      .range([scale.yAxis.range.start, scale.yAxis.range.end]);
-  };
-
-  const setXAxis = function () {
-    let
-      tx = 0,
-      ty = canvas.height - canvas.padding.bottom;
-
-    setXScale();
-
-    svg.append('g')
-      .attr('transform', 'translate(' + tx + ', ' + ty + ')')
-      .call(d3.axisBottom(xScale));
-  };
-
-  const setYAxis = function () {
-    let
-      tx = canvas.padding.left,
-      ty = 0;
-
-    setYScale();
-
-    svg.append('g')
-      .attr('transform', 'translate(' + tx + ', ' + ty + ')')
-      .call(d3.axisLeft(yScale));
-  };
+  // Three functions that change the tooltip when user hover / move / leave a node
+  function mouseover(d) {
+    Tooltip
+      .style("opacity", 1)
+    d3.select(this)
+      .style("stroke", "black")
+      .style("opacity", 1)
+  }
+  function mousemove(d) {
+    Tooltip
+      .html("The exact value of<br>this cell is: " + d.value)
+      .style("left", (d3.mouse(this)[0]+70) + "px")
+      .style("top", (d3.mouse(this)[1]) + "px")
+  }
+  function mouseleave(d) {
+    Tooltip
+      .style("opacity", 0)
+    d3.select(this)
+      .style("stroke", "none")
+      .style("opacity", 0.8)
+  }
 
   function dragstarted(d) {
     if (!d3.event.active) {
@@ -147,17 +141,8 @@
   d3.json('/data/characters.json')
     .then(function (graph) {
 
-      var graphLinksBySource = d3.nest()
-        .key(function (d) {
-          return d.source;
-        })
-        .entries(graph.links);
-
-      console.log(graphLinksBySource);
-
-      // count links per name
-      // and save as object
-      var graphLinksCount = d3.nest()
+      // count links per name and save as object
+      let graphLinksCount = d3.nest()
         .key(function (d) {
           return d.source;
         })
@@ -165,8 +150,6 @@
           return v.length;
         })
         .object(graph.links);
-
-      console.log(graphLinksCount);
 
       simulation = d3.forceSimulation()
         .force('link', d3.forceLink()
@@ -177,7 +160,6 @@
         )
         .force('charge', d3.forceManyBody()
           .strength(-100)
-
         )
         .force('center', d3.forceCenter(canvas.width / 2, canvas.height / 2));
 
@@ -194,7 +176,7 @@
 
       // building the nodes by circles
       groupData = svg.selectAll()
-        .data(graph.nodes)
+        .data(graph.nodes);
 
       group = groupData.enter()
         .append('g')
@@ -218,10 +200,14 @@
         .attr('fill', function (d) {
           return color(d.group);
         })
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove)
+        .on("mouseleave", mouseleave)
         .call(d3.drag()
           .on('start', dragstarted)
           .on('drag', dragged)
-          .on('end', dragended));
+          .on('end', dragended)
+        );
 
       // building title and text attributes
       group.append('title')
