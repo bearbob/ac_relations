@@ -58,36 +58,25 @@
       .attr('viewbox', canvas.viewbox.x + ' ' + canvas.viewbox.y + ' ' + canvas.viewbox.width + ' ' + canvas.viewbox.height)
   };
 
-  var Tooltip = d3.select("#diagram")
-    .append("div")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "2px")
-    .style("border-radius", "5px")
-    .style("padding", "5px");
+  var Tooltip = d3.select(".tooltip");
 
   // Three functions that change the tooltip when user hover / move / leave a node
   function mouseover(d) {
-    Tooltip
-      .style("opacity", 1)
+    Tooltip.style("opacity", 1);
     d3.select(this)
       .style("stroke", "black")
-      .style("opacity", 1)
+      .style("opacity", 1);
   }
+
   function mousemove(d) {
-    Tooltip
-      .html("The exact value of<br>this cell is: " + d.value)
-      .style("left", (d3.mouse(this)[0]+70) + "px")
-      .style("top", (d3.mouse(this)[1]) + "px")
+    Tooltip.html(d.description);
   }
+
   function mouseleave(d) {
-    Tooltip
-      .style("opacity", 0)
+    Tooltip.style("opacity", 0);
     d3.select(this)
       .style("stroke", "none")
-      .style("opacity", 0.8)
+      .style("opacity", 0.8);
   }
 
   function dragstarted(d) {

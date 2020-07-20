@@ -3,57 +3,57 @@
     {
       "id": "Tadamir",
       "group": 1,
-      "value": "Spieler"
+      "description": "Spieler"
     },
     {
       "id": "Jin",
       "group": 1,
-      "value": "Spieler"
+      "description": "Spieler"
     },
     {
       "id": "Parmigianino",
       "group": 1,
-      "value": "Spieler"
+      "description": "Spieler"
     },
     {
       "id": "Orveyl",
       "group": 1,
-      "value": "Spieler"
+      "description": "Spieler"
     },
     {
       "id": "Bhavin",
       "group": 1,
-      "value": "Spieler"
+      "description": "Spieler"
     },
     {
       "id": "Alba",
       "group": 2,
-      "value": "Test"
+      "description": "Test"
     },
     {
       "id": "Smasher",
       "group": 3,
-      "value": "Test"
+      "description": "Test"
     },
     {
       "id": "Laserbeam",
       "group": 3,
-      "value": "Test"
+      "description": "Test"
     },
     {
       "id": "Loxxkatron",
       "group": 4,
-      "value": "Test"
+      "description": "Test"
     },
     {
       "id": "Gorev",
       "group": 4,
-      "value": "Test"
+      "description": "Test"
     },
     {
       "id": "Amanda",
       "group": 4,
-      "value": "Test"
+      "description": "Test"
     }
   ],
   "links": [
