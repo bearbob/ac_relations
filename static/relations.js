@@ -1,4 +1,4 @@
-(function () {
+var buildGraph = function (sFile) {
   'use strict';
 
   //global vars
@@ -62,18 +62,16 @@
 
   // Three functions that change the tooltip when user hover / move / leave a node
   function mouseover(d) {
-    Tooltip.style("opacity", 1);
     d3.select(this)
       .style("stroke", "black")
       .style("opacity", 1);
   }
 
   function mousemove(d) {
-    Tooltip.html(d.description);
+    Tooltip.html('<b>' + d.id + '</b><br/> ' + d.description);
   }
 
   function mouseleave(d) {
-    Tooltip.style("opacity", 0);
     d3.select(this)
       .style("stroke", "none")
       .style("opacity", 0.8);
@@ -127,7 +125,7 @@
   // - - - - - - - - - -
   setCanvas('#diagram');
 
-  d3.json('/data/characters.json')
+  d3.json(sFile)
     .then(function (graph) {
 
       // count links per name and save as object
@@ -220,4 +218,4 @@
         .links(graph.links);
     });
   // - - - - - - - - - -
-})();
+};
