@@ -2,90 +2,228 @@
   "nodes": [
     {
       "id": "Tadamir",
+      "episode": 0,
       "group": 1,
-      "description": "Spieler"
+      "description": "Tadamir ist ein menschlicher Barde, der in einer behüteten Familie mit vielen Geschwistern aufwuchs. Nachdem er bei einer gewaltsamen Revolution nicht nur die Liebe seines Lebens verlor, schwor er Rache und zog aus die Verantwortlichen zur Strecke zu bringen."
     },
     {
       "id": "Jin",
+      "episode": 0,
       "group": 1,
-      "description": "Spieler"
+      "description": "Jin ist ein Changeling, der im Auftrag der Göttin Titania ruchlose Hexenmeister tötet, um das Gleichgewicht der Mächte wieder herzustellen."
     },
     {
       "id": "Parmigianino",
+      "episode": 0,
       "group": 1,
       "description": "Spieler"
     },
     {
       "id": "Orveyl",
+      "episode": 0,
       "group": 1,
       "description": "Spieler"
     },
     {
       "id": "Bhavin",
+      "episode": 0,
       "group": 1,
-      "description": "Spieler"
+      "description": "Bhavin ist ein 42jähriger Kalashtar, der auf einer Hochebene aufgewachsen ist und die Magie der Wiederherstellung gelernt hat. Er wohnt mit seiner Frau und den Kindern auf einem Bauernhof in einem Wald. Als sein Wassergeist ihm den Auftrag gab Jin zu finden und zu folgen, begann für ihn das Abenteuer. <br/>Er ist gerne in der freien Natur, raucht Pfeife, trinkt gerne Fruchtsäfte und spielt gekonnt die Panflöte."
     },
     {
       "id": "Alba",
       "group": 2,
-      "description": "Test"
+      "episode": 14,
+      "description": "..."
+    },
+    {
+      "id": "Falana",
+      "group": 2,
+      "episode": 15,
+      "description": "Ein elfische Spionin und Diebin"
+    },
+    {
+      "id": "Leoric",
+      "group": 2,
+      "episode": -1,
+      "description": "Ein berühmter Barde und Wanderer, der oft ohne Ziel und Karte unterwegs war"
     },
     {
       "id": "Smasher",
       "group": 3,
-      "description": "Test"
+      "episode": 6,
+      "description": "General im Kult der Maschinenmutter, dessen Arme aus hartem Metall bestehen"
     },
     {
       "id": "Laserbeam",
       "group": 3,
-      "description": "Test"
+      "episode": 3,
+      "description": "General im Kult der Maschinenmutter. Er ist ein großer, breitschultriger Mann mit langem blonden Haar und stechenden, grünen Augen. Sein Blick verrät den Wahnsinn der in seinem Kopf vorgeht, die Nase sieht aus als wäre sie schon mehrfach gebrochen worden.<br/> Während er seinen Dienern befehle zubrüllt, hüpft der glühende Punkt seiner Zigarette vor seinem Mund hin und her. Sein linker Arm ist von einem rostigen Metall ummantelt, dessen Ende wie ein kleines Kanonenrohr aussieht."
     },
     {
       "id": "Loxxkatron",
       "group": 4,
-      "description": "Test"
+      "episode": 7,
+      "description": "Elfling"
     },
     {
       "id": "Gorev",
       "group": 4,
-      "description": "Test"
+      "episode": 11,
+      "description": "Auch bekannt als \"Der Nussknacker\", mächtiger Untergrundboss in der Stadt des Riesen"
     },
     {
       "id": "Amanda",
       "group": 4,
-      "description": "Test"
+      "episode": 11,
+      "description": "Handlangerin von Gorev"
+    },
+    {
+      "id": "Liliana",
+      "group": 5,
+      "episode": 12,
+      "description": "Liliana von der Hagelweide, Stadträtin in der Stadt des Riesen."
+    },
+    {
+      "id": "Ton",
+      "group": 4,
+      "episode": 11,
+      "description": "Ein männlicher Elf, der als Spion und Auftragsmörder für den Nussknacker arbeitet."
+    },
+    {
+      "id": "Titania",
+      "group": 100,
+      "episode": 1,
+      "description": "Die Göttin der Fey und Herrscherin des Sommerreichs"
+    },
+    {
+      "id": "Lajak",
+      "group": 100,
+      "episode": 1,
+      "description": "Kriegsgott"
+    },
+    {
+      "id": "Dryasis",
+      "group": 100,
+      "episode": 12,
+      "description": "Dryasis ist die Göttin des Tages, der Sonne und des Friedens. Sie ist eine der weit verbreitetsten Gottheiten in der zerissenen Welt. Ihr Symbol ist der Sonnenaufgang (ein waagerechter Strich mit einem Halbkreis auf der oberen Seite, der eine Sonne symbolisiert). "
     }
   ],
   "links": [
     {
       "source": "Jin",
+      "target": "Falana",
+      "episode": 0,
+      "description": "...",
+      "value": 3
+    },
+    {
+      "source": "Alba",
+      "target": "Jin",
+      "episode": 16,
+      "value": 3
+    },
+    {
+      "source": "Jin",
       "target": "Alba",
+      "episode": 16,
+      "value": 3
+    },
+    {
+      "source": "Tadamir",
+      "target": "Alba",
+      "episode": 14,
+      "value": 2
+    },
+    {
+      "source": "Parmigianino",
+      "target": "Alba",
+      "episode": 14,
+      "value": 1
+    },
+    {
+      "source": "Bhavin",
+      "target": "Alba",
+      "episode": 12,
       "value": 1
     },
     {
       "source": "Parmigianino",
       "target": "Smasher",
+      "episode": 0,
       "value": 2
     },
     {
       "source": "Smasher",
       "target": "Laserbeam",
+      "episode": 0,
       "value": 3
     },
     {
       "source": "Bhavin",
       "target": "Jin",
+      "episode": 0,
+      "value": 3
+    },
+    {
+      "source": "Jin",
+      "target": "Liliana",
+      "episode": 12,
+      "value": 1
+    },
+    {
+      "source": "Tadamir",
+      "target": "Leoric",
+      "episode": -1,
+      "value": 4
+    },
+    {
+      "source": "Tadamir",
+      "target": "Liliana",
+      "episode": 12,
       "value": 1
     },
     {
       "source": "Amanda",
       "target": "Gorev",
+      "episode": 12,
+      "value": 3
+    },
+    {
+      "source": "Ton",
+      "target": "Gorev",
+      "episode": 12,
+      "value": 3
+    },
+    {
+      "source": "Bhavin",
+      "target": "Ton",
+      "episode": 12,
+      "value": 1
+    },
+    {
+      "source": "Jin",
+      "target": "Titania",
+      "episode": 1,
+      "value": 2
+    },
+    {
+      "source": "Orveyl",
+      "target": "Lajak",
+      "episode": 1,
+      "value": 2
+    },
+    {
+      "source": "Tadamir",
+      "target": "Dryasis",
+      "episode": 12,
       "value": 1
     },
     {
       "source": "Loxxkatron",
       "target": "Gorev",
-      "value": 1
+      "episode": 11,
+      "value": 2
     }
   ]
 }
