@@ -171,7 +171,10 @@ var buildGraph = function (sFile) {
         })
         .attr("stroke-width", function (d) {
           return Math.sqrt(2*d.value);
-        });
+        })
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove)
+        .on("mouseleave", mouseleave);
 
       // building the nodes by circles
       groupData = svg.selectAll()
