@@ -12,8 +12,8 @@ var buildGraph = function (sFile) {
   let color = d3.scaleOrdinal(d3.schemeCategory10);
 
   const canvas = {
-    width: 1200,
-    height: 800,
+    width: 1100,
+    height: 600,
     viewbox: {
       x: 0,
       y: 0,
@@ -56,6 +56,11 @@ var buildGraph = function (sFile) {
       .attr('width', canvas.width)
       .attr('height', canvas.height)
       .attr('viewbox', canvas.viewbox.x + ' ' + canvas.viewbox.y + ' ' + canvas.viewbox.width + ' ' + canvas.viewbox.height)
+      .call(d3.zoom()
+        .on("zoom", function () {
+          svg.attr("transform", d3.event.transform)
+        })
+      )
   };
 
   var Tooltip = d3.select(".tooltip");
@@ -143,7 +148,7 @@ var buildGraph = function (sFile) {
           .id(function (d) {
             return d.id;
           })
-          .distance(100)
+          .distance(45)
         )
         .force('charge', d3.forceManyBody()
           .strength(-100)
@@ -157,8 +162,15 @@ var buildGraph = function (sFile) {
         .data(graph.links)
         .enter()
         .append("line")
+        .style("stroke-dasharray", function (d) {
+          switch(d.value) {
+            case 1: return ("3, 3");
+            case 2: return ("4, 1");
+          }
+          return ("0, 0");
+        })
         .attr("stroke-width", function (d) {
-          return Math.sqrt(d.value);
+          return Math.sqrt(2*d.value);
         });
 
       // building the nodes by circles
@@ -175,7 +187,7 @@ var buildGraph = function (sFile) {
         .attr('r', function (d) {
           let r;
           if (graphLinksCount[d.id]) {
-            r = graphLinksCount[d.id] * 3;
+            r = graphLinksCount[d.id] * 2;
           } else {
             r = 0;
           }
