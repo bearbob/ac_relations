@@ -44,13 +44,13 @@
     {
       "id": "Falana",
       "group": 2,
-      "episode": 15,
+      "episode": 0,
       "description": "Ein elfische Spionin und vermeintliche Diebin"
     },
     {
       "id": "Leoric",
       "group": 2,
-      "episode": -1,
+      "episode": 0,
       "description": "Ein berühmter Barde und Wanderer, der oft ohne Ziel und Karte unterwegs war"
     },
     {
@@ -224,31 +224,37 @@
     {
       "source": "Die Spielzeugsoldaten",
       "target": "Gorev",
-      "episode": 18,
+      "episode": 11,
       "value": 2
     },
     {
       "source": "Die Spielzeugsoldaten",
       "target": "Sandra",
-      "episode": 18,
+      "episode": 11,
       "value": 2
     },
     {
       "source": "Die Spielzeugsoldaten",
       "target": "Amanda",
-      "episode": 18,
+      "episode": 11,
       "value": 2
     },
     {
       "source": "Die Spielzeugsoldaten",
       "target": "Ton",
+      "episode": 11,
+      "value": 2
+    },
+    {
+      "source": "Sandra",
+      "target": "Tadamir",
       "episode": 18,
       "value": 2
     },
     {
       "source": "Sandra",
       "target": "Gorev",
-      "episode": 18,
+      "episode": 11,
       "value": 3
     },
     {

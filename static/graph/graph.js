@@ -83,6 +83,15 @@ var buildGraph = function (sFile, episodeFilter) {
   d3.json(sFile)
     .then(function (graph) {
 
+      //filter the links and nodes
+      graph.nodes = graph.nodes.filter(node => node.episode <= episodeFilter);
+      graph.links = graph.links.filter(link => {
+        //the link can be shown if the episode filter is true and both nodes are visible as well
+        let src = graph.nodes.find(node => node.id == link.source);
+        let trgt = graph.nodes.find(node => node.id == link.target);
+        return link.episode <= episodeFilter && src && src.episode <= episodeFilter && trgt && trgt.episode <= episodeFilter;
+      });
+
       // count links per name and save as object
       let graphLinksCount = d3.nest()
         .key(function (d) {
