@@ -1,54 +1,19 @@
-var buildGraph = function (sFile) {
-  'use strict';
+/**
+ * @public
+ *
+ * @param {string} sFile Path to the JSON file containing the data
+ * @param {number} [episodeFilter] If a number is given, only data up to this episode is displayed
+ */
+var buildGraph = function (sFile, episodeFilter) {
+  episodeFilter = episodeFilter || 9999;
+  //TODO Implement episode filter
 
-  //global vars
   let svg;
   let simulation;
   let link;
-  let node;
   let group;
   let groupData;
-  let nest;
   let color = d3.scaleOrdinal(d3.schemeCategory10);
-
-  const canvas = {
-    width: 1100,
-    height: 600,
-    viewbox: {
-      x: 0,
-      y: 0,
-      width: 800,
-      height: 500
-    },
-    padding: {
-      top: 20,
-      right: 20,
-      bottom: 30,
-      left: 40
-    }
-  };
-  const scale = {
-    xAxis: {
-      domain: {
-        from: 0,
-        to: 100
-      },
-      range: {
-        start: canvas.padding.left,
-        end: canvas.width - canvas.padding.right
-      }
-    },
-    yAxis: {
-      domain: {
-        from: 5,
-        to: 0
-      },
-      range: {
-        start: canvas.padding.top,
-        end: canvas.height - canvas.padding.bottom
-      }
-    }
-  };
 
   const setCanvas = function (contextSelector) {
     svg = d3.select(contextSelector)
@@ -62,25 +27,6 @@ var buildGraph = function (sFile) {
         })
       )
   };
-
-  var Tooltip = d3.select(".tooltip");
-
-  // Three functions that change the tooltip when user hover / move / leave a node
-  function mouseover(d) {
-    d3.select(this)
-      .style("stroke", "black")
-      .style("opacity", 1);
-  }
-
-  function mousemove(d) {
-    Tooltip.html('<b>' + d.id + '</b><br/> ' + d.description);
-  }
-
-  function mouseleave(d) {
-    d3.select(this)
-      .style("stroke", "none")
-      .style("opacity", 0.8);
-  }
 
   function dragstarted(d) {
     if (!d3.event.active) {
@@ -172,9 +118,9 @@ var buildGraph = function (sFile) {
         .attr("stroke-width", function (d) {
           return Math.sqrt(2*d.value);
         })
-        .on("mouseover", mouseover)
-        .on("mousemove", mousemove)
-        .on("mouseleave", mouseleave);
+        .on("mouseover", function(d) {
+          mouseOverLink(this, d, d3.select(".tooltip"));
+        })
 
       // building the nodes by circles
       groupData = svg.selectAll()
@@ -185,7 +131,7 @@ var buildGraph = function (sFile) {
         .attr('class', 'nodes')
         .attr('transform', 'translate(' + (0) + ',' + (0) + ') rotate(0)');
 
-      node = group
+      let node = group
         .append('circle')
         .attr('r', function (d) {
           let r;
@@ -202,9 +148,10 @@ var buildGraph = function (sFile) {
         .attr('fill', function (d) {
           return color(d.group);
         })
-        .on("mouseover", mouseover)
-        .on("mousemove", mousemove)
-        .on("mouseleave", mouseleave)
+        .on("mouseover", function(d) {
+          mouseOverNode(this, d, d3.select(".tooltip"));
+        })
+        .on("mouseleave", mouseLeaveNode)
         .call(d3.drag()
           .on('start', dragstarted)
           .on('drag', dragged)
