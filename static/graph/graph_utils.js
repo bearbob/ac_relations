@@ -92,10 +92,11 @@ const mouseOverNode = function(context, element, tooltip) {
   tooltip.html('<b>' + name + '</b><br/> ' + description);
 };
 
-const mouseLeaveNode = function(element) {
-  d3.select(this)
+const mouseLeaveNode = function(context, element, tooltip) {
+  d3.select(context)
     .style("stroke", getStrokeColor(element))
     .style('fill', getFillColor(element));
+  tooltip.html('Berühre einen Knoten oder eine Kante, um mehr Informationen zu sehen.');
 };
 
 const mouseOverLink = function(context, element, tooltip) {

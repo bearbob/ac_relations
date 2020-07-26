@@ -88,15 +88,18 @@ var buildGraph = function (sFile, episodeFilter) {
         })
         .object(graph.links);
 
+
       simulation = d3.forceSimulation()
         .force('link', d3.forceLink()
           .id(function (d) {
             return d.id;
           })
-          .distance(45)
+          .distance(50)
         )
+        .force('x', d3.forceX())
+        .force('y', d3.forceY())
         .force('charge', d3.forceManyBody()
-          .strength(-100)
+          .strength(-300)
         )
         .force('center', d3.forceCenter(canvas.width / 2, canvas.height / 2));
 
@@ -155,7 +158,9 @@ var buildGraph = function (sFile, episodeFilter) {
         .on("mouseover", function(d) {
           mouseOverNode(this, d, d3.select(".tooltip"));
         })
-        .on("mouseleave", mouseLeaveNode)
+        .on("mouseleave", function(d) {
+          mouseLeaveNode(this, d, d3.select(".tooltip"));
+        })
         .call(d3.drag()
           .on('start', dragstarted)
           .on('drag', dragged)
