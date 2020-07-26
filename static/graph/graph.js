@@ -27,6 +27,11 @@ var buildGraph = function (sFile, episodeFilter) {
       )
   };
 
+  // Define the div for the tooltip
+  const div = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
   function dragstarted(d) {
     if (!d3.event.active) {
       simulation.alphaTarget(0.3).restart();
@@ -122,9 +127,11 @@ var buildGraph = function (sFile, episodeFilter) {
           return 6;
         })
         .on("mouseover", function(d) {
-          mouseOverLink(this, d, d3.select(".tooltip"));
+          mouseOverLink(this, d, d3.select(".hovertext"));
         })
-        .on("mouseleave", mouseLeaveLink)
+        .on("mouseleave", function(d) {
+          mouseLeaveLink(this, d, d3.select(".hovertext"));
+        })
 
       // building the nodes by circles
       groupData = svg.selectAll()
@@ -156,10 +163,10 @@ var buildGraph = function (sFile, episodeFilter) {
         })
         .attr('fill', getFillColor)
         .on("mouseover", function(d) {
-          mouseOverNode(this, d, d3.select(".tooltip"));
+          mouseOverNode(this, d, d3.select(".hovertext"));
         })
         .on("mouseleave", function(d) {
-          mouseLeaveNode(this, d, d3.select(".tooltip"));
+          mouseLeaveNode(this, d, d3.select(".hovertext"));
         })
         .call(d3.drag()
           .on('start', dragstarted)

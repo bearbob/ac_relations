@@ -76,6 +76,18 @@ const getHoverStrokeColor = function(d) {
   return sColor;
 };
 
+const showTooltip = function(tooltip, name, description) {
+  tooltip.html('<b>' + name + '</b><br/> ' + description);
+  tooltip.style("left", (d3.event.pageX + 10) + "px")
+          .style("top", (d3.event.pageY + 20) + "px");
+}
+
+const resetTooltip = function(tooltip) {
+  tooltip.html('Berühre einen Knoten oder eine Kante, um mehr Informationen zu sehen.');
+  tooltip.style("left", "8px")
+          .style("top", "8px");
+}
+
 /**
  *
  * @param {object} context The current execution context
@@ -89,14 +101,14 @@ const mouseOverNode = function(context, element, tooltip) {
     .style("opacity", 1);
   let name = element.id? element.id : "???";
   let description = element.description? element.description : "???";
-  tooltip.html('<b>' + name + '</b><br/> ' + description);
+  showTooltip(tooltip, name, description);
 };
 
 const mouseLeaveNode = function(context, element, tooltip) {
   d3.select(context)
     .style("stroke", getStrokeColor(element))
     .style('fill', getFillColor(element));
-  tooltip.html('Berühre einen Knoten oder eine Kante, um mehr Informationen zu sehen.');
+  resetTooltip(tooltip);
 };
 
 const mouseOverLink = function(context, element, tooltip) {
@@ -105,9 +117,10 @@ const mouseOverLink = function(context, element, tooltip) {
   let name = element.id? element.id : "???";
   name = element.source.id + ' & ' + element.target.id + ': ' + name;
   let description = element.description? element.description : "???";
-  tooltip.html('<b>' + name + '</b><br/> ' + description);
+  showTooltip(tooltip, name, description);
 };
 
-const mouseLeaveLink = function(element) {
-  d3.select(this).style("stroke", 'grey');
+const mouseLeaveLink = function(context, element, tooltip) {
+  d3.select(context).style("stroke", 'grey');
+  resetTooltip(tooltip);
 };
