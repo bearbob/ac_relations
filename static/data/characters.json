@@ -45,7 +45,7 @@
       "id": "Falana",
       "group": 2,
       "episode": 15,
-      "description": "Ein elfische Spionin und Diebin"
+      "description": "Ein elfische Spionin und vermeintliche Diebin"
     },
     {
       "id": "Leoric",
@@ -79,6 +79,13 @@
       "description": "Elfling"
     },
     {
+      "id": "Die Spielzeugsoldaten",
+      "group": 4,
+      "isFaction": true,
+      "episode": 11,
+      "description": "Die größte kriminelle Vereinigung in der Stadt des Riesen"
+    },
+    {
       "id": "Gorev",
       "group": 4,
       "episode": 11,
@@ -89,6 +96,12 @@
       "group": 4,
       "episode": 11,
       "description": "Handlangerin von Gorev"
+    },
+    {
+      "id": "Sandra",
+      "group": 4,
+      "episode": 18,
+      "description": "Gorevs rechte Hand. Eine junge Frau mit kurzen blonden Haaren, die fast immer ein schelmisches Grinsen aufgelegt hat."
     },
     {
       "id": "Liliana",
@@ -207,6 +220,36 @@
       "target": "Liliana",
       "episode": 12,
       "value": 1
+    },
+    {
+      "source": "Die Spielzeugsoldaten",
+      "target": "Gorev",
+      "episode": 18,
+      "value": 2
+    },
+    {
+      "source": "Die Spielzeugsoldaten",
+      "target": "Sandra",
+      "episode": 18,
+      "value": 2
+    },
+    {
+      "source": "Die Spielzeugsoldaten",
+      "target": "Amanda",
+      "episode": 18,
+      "value": 2
+    },
+    {
+      "source": "Die Spielzeugsoldaten",
+      "target": "Ton",
+      "episode": 18,
+      "value": 2
+    },
+    {
+      "source": "Sandra",
+      "target": "Gorev",
+      "episode": 18,
+      "value": 3
     },
     {
       "source": "Amanda",

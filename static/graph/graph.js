@@ -13,7 +13,6 @@ var buildGraph = function (sFile, episodeFilter) {
   let link;
   let group;
   let groupData;
-  let color = d3.scaleOrdinal(d3.schemeCategory10);
 
   const setCanvas = function (contextSelector) {
     svg = d3.select(contextSelector)
@@ -145,16 +144,14 @@ var buildGraph = function (sFile, episodeFilter) {
           }
           return 7;
         })
-        .attr('stroke', function(d) {
+        .attr('stroke', getStrokeColor)
+        .attr('stroke-width', function(d) {
           if(d.isFaction) {
-            return 'grey';
+            return 5;
           }
-          return 'white';
+          return 2;
         })
-        .attr('stroke-width', '2')
-        .attr('fill', function (d) {
-          return color(d.group);
-        })
+        .attr('fill', getFillColor)
         .on("mouseover", function(d) {
           mouseOverNode(this, d, d3.select(".tooltip"));
         })
