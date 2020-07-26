@@ -108,6 +108,7 @@ var buildGraph = function (sFile, episodeFilter) {
         .data(graph.links)
         .enter()
         .append("line")
+        .attr('stroke', 'grey')
         .style("stroke-dasharray", function (d) {
           switch(d.value) {
             case 1: return ("3, 3");
@@ -116,11 +117,12 @@ var buildGraph = function (sFile, episodeFilter) {
           return ("0, 0");
         })
         .attr("stroke-width", function (d) {
-          return Math.sqrt(2*d.value);
+          return 6;
         })
         .on("mouseover", function(d) {
           mouseOverLink(this, d, d3.select(".tooltip"));
         })
+        .on("mouseleave", mouseLeaveLink)
 
       // building the nodes by circles
       groupData = svg.selectAll()
@@ -134,16 +136,21 @@ var buildGraph = function (sFile, episodeFilter) {
       let node = group
         .append('circle')
         .attr('r', function (d) {
-          let r;
-          if (graphLinksCount[d.id]) {
-            r = graphLinksCount[d.id] * 2;
-          } else {
-            r = 0;
+          //make player and faction nodes slightly larger
+          if(d.isPlayer) {
+            return 11;
           }
-          if (r < 5) r = 5;
-          return r;
+          if(d.isFaction) {
+            return 10;
+          }
+          return 7;
         })
-        .attr('stroke', 'white')
+        .attr('stroke', function(d) {
+          if(d.isFaction) {
+            return 'grey';
+          }
+          return 'white';
+        })
         .attr('stroke-width', '2')
         .attr('fill', function (d) {
           return color(d.group);
@@ -158,16 +165,21 @@ var buildGraph = function (sFile, episodeFilter) {
           .on('end', dragended)
         );
 
-      // building title and text attributes
-      group.append('title')
-        .text(function (d) {
-          return d.id;
-        });
-
+      // building text attributes
       group.append('text')
-        .attr('transform', 'translate(5, 0) rotate(0)')
+        .attr('transform', 'translate(11, 0) rotate(0)')
         .text(function (d, i) {
-          return d.id;
+          let name = d.id;
+          if(d.isFaction) {
+            name = '['+name+']';
+          }
+          return name;
+        })
+        .attr('font-weight', function (d, i) {
+          if(d.isFaction) {
+            return 'bold';
+          }
+          return 'normal';
         });
 
       // realtime engine

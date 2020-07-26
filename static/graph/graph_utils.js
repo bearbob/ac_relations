@@ -14,6 +14,7 @@ const canvas = {
     left: 40
   }
 };
+
 const scale = {
   xAxis: {
     domain: {
@@ -45,14 +46,22 @@ const mouseOverNode = function(context, element, tooltip) {
 };
 
 const mouseLeaveNode = function(element) {
-  d3.select(this)
-    .style("stroke", "none")
-    .style("opacity", 0.8);
+  let color = 'white';
+  if(element.isFaction) {
+    color = 'grey';
+  }
+  d3.select(this).style("stroke", color);
 };
 
 const mouseOverLink = function(context, element, tooltip) {
+  d3.select(context).style("stroke", "black");
+
   let name = element.id? element.id : "???";
   name = element.source.id + ' & ' + element.target.id + ': ' + name;
   let description = element.description? element.description : "???";
   tooltip.html('<b>' + name + '</b><br/> ' + description);
+};
+
+const mouseLeaveLink = function(element) {
+  d3.select(this).style("stroke", "grey");
 };

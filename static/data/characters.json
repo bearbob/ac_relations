@@ -4,30 +4,35 @@
       "id": "Tadamir",
       "episode": 0,
       "group": 1,
+      "isPlayer": true,
       "description": "Tadamir ist ein menschlicher Barde, der in einer behüteten Familie mit vielen Geschwistern aufwuchs. Nachdem er bei einer gewaltsamen Revolution nicht nur die Liebe seines Lebens verlor, schwor er Rache und zog aus die Verantwortlichen zur Strecke zu bringen."
     },
     {
       "id": "Jin",
       "episode": 0,
       "group": 1,
+      "isPlayer": true,
       "description": "Jin ist ein Changeling, der im Auftrag der Göttin Titania ruchlose Hexenmeister tötet, um das Gleichgewicht der Mächte wieder herzustellen."
     },
     {
       "id": "Parmigianino",
       "episode": 0,
       "group": 1,
+      "isPlayer": true,
       "description": "Spieler"
     },
     {
       "id": "Orveyl",
       "episode": 0,
       "group": 1,
+      "isPlayer": true,
       "description": "Spieler"
     },
     {
       "id": "Bhavin",
       "episode": 0,
       "group": 1,
+      "isPlayer": true,
       "description": "Bhavin ist ein 42jähriger Kalashtar, der auf einer Hochebene aufgewachsen ist und die Magie der Wiederherstellung gelernt hat. Er wohnt mit seiner Frau und den Kindern auf einem Bauernhof in einem Wald. Als sein Wassergeist ihm den Auftrag gab Jin zu finden und zu folgen, begann für ihn das Abenteuer. <br/>Er ist gerne in der freien Natur, raucht Pfeife, trinkt gerne Fruchtsäfte und spielt gekonnt die Panflöte."
     },
     {
@@ -47,6 +52,13 @@
       "group": 2,
       "episode": -1,
       "description": "Ein berühmter Barde und Wanderer, der oft ohne Ziel und Karte unterwegs war"
+    },
+    {
+      "id": "Kult der Maschinenmutter",
+      "group": 3,
+      "episode": 1,
+      "description": "Der Kult der Maschinenmutter",
+      "isFaction": true
     },
     {
       "id": "Smasher",
@@ -151,6 +163,18 @@
     {
       "source": "Parmigianino",
       "target": "Smasher",
+      "episode": 0,
+      "value": 2
+    },
+    {
+      "source": "Smasher",
+      "target": "Kult der Maschinenmutter",
+      "episode": 0,
+      "value": 2
+    },
+    {
+      "source": "Laserbeam",
+      "target": "Kult der Maschinenmutter",
       "episode": 0,
       "value": 2
     },
