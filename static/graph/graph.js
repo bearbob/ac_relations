@@ -177,7 +177,12 @@ var buildGraph = function (sFile, episodeFilter) {
             return 'bold';
           }
           return 'normal';
-        });
+        })
+        //add a white outline to the text
+        .clone(true).lower()
+        .attr("fill", "none")
+        .attr("stroke", "white")
+        .attr("stroke-width", 3);
 
       // realtime engine
       simulation
