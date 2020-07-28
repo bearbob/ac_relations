@@ -475,6 +475,14 @@
       "target": "Grace",
       "episode": 12,
       "value": 1
+    },
+    {
+      "source": "Jin",
+      "target": "Clint",
+      "episode": 9,
+      "value": 1,
+      "id": "Sterbehilfe",
+      "description": "Jin hat Clint seine Hilfe angeboten, falls er sterben wollte. Clint hat das Angebot ausgeschlagen und sich kurz darauf erschossen."
     }
   ]
 }
