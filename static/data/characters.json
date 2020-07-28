@@ -161,19 +161,32 @@
       "id": "Titania",
       "group": 100,
       "episode": 1,
-      "description": "Die Göttin der Fey und Herrscherin des Sommerreichs"
+      "description": "Göttin der Fey und Herrscherin des Sommerreichs"
     },
     {
       "id": "Lajak",
       "group": 100,
       "episode": 1,
-      "description": "Kriegsgott"
+      "description": "Gott des Kampfes und des Windes"
     },
     {
       "id": "Dryasis",
       "group": 100,
       "episode": 12,
-      "description": "Dryasis ist die Göttin des Tages, der Sonne und des Friedens. Sie ist eine der weit verbreitetsten Gottheiten in der zerissenen Welt. Ihr Symbol ist der Sonnenaufgang (ein waagerechter Strich mit einem Halbkreis auf der oberen Seite, der eine Sonne symbolisiert). "
+      "description": "Göttin des Tages, der Sonne und des Friedens. Sie ist eine der weit verbreitetsten Gottheiten in der zerissenen Welt. Ihr Symbol ist der Sonnenaufgang (ein waagerechter Strich mit einem Halbkreis auf der oberen Seite, der eine Sonne symbolisiert). "
+    },
+    {
+      "id": "Clint",
+      "group": 11,
+      "episode": 9,
+      "description": "Ein verbitterter alter Mann, der allein in einem vom Kult der Maschinenmutter zerstörten Dorf lebt."
+    },
+    {
+      "id": "Wrakenberg",
+      "group": 13,
+      "isFaction": true,
+      "episode": 2,
+      "description": "Ein kleines Dorf, das beinahe Opfer des Kults der Maschinenmutter geworden wäre."
     }
   ],
   "links": [
@@ -182,18 +195,14 @@
       "target": "Falana",
       "episode": 0,
       "id": "Alte Bekannte",
-      "description": "...",
-      "value": 3
-    },
-    {
-      "source": "Alba",
-      "target": "Jin",
-      "episode": 16,
+      "description": "Jin ist seit Jahren auf der Suche nach Falana, da sie ihm einen wichtigen Gegenstand gestohlen hat.",
       "value": 3
     },
     {
       "source": "Jin",
       "target": "Alba",
+      "id": "Versuchter Mord",
+      "description": "Alba ist die Überlebende eines Angriffs, den Jin im Auftrag seiner Göttin ausgeführt hat. Jin überlebte den Kampf nur knapp und wähnte Alba tot.",
       "episode": 16,
       "value": 3
     },
@@ -201,12 +210,16 @@
       "source": "Tadamir",
       "target": "Alba",
       "episode": 14,
-      "value": 2
+      "id": "Zufällige Begegnung",
+      "description": "Tadamir ist Alba zufällig auf dem Markt 'Der Nabel' über den Weg gelaufen und hat sie, aufgrund der gleichen Gestalt, mit Jin verwechselt. Es hat einen Moment gedauert, bis er seinen Irrtum bemerkt hat.",
+      "value": 1
     },
     {
       "source": "Parmigianino",
       "target": "Alba",
-      "episode": 14,
+      "id": "Zufällige Begegnung",
+      "description": "Nino hat Alba im Stadtpark der Stadt des Riesen gesehen und schnell verstanden, dass die Elfe vermutlich die Person ist, nach der Jin sucht.",
+      "episode": 12,
       "value": 1
     },
     {
@@ -218,6 +231,14 @@
       "description": "Meister Hoshi zog Nino und seine Brüder auf"
     },
     {
+      "source": "Parmigianino",
+      "target": "Masolino",
+      "episode": 0,
+      "value": 4,
+      "id": "Brüder",
+      "description": "Masolino und Parmigianino sind Brüder, die als Eier vor dem Kloster von Meister Hoshi aufgefunden wurden."
+    },
+    {
       "source": "Masolino",
       "target": "Yamato Hoshi",
       "episode": 0,
@@ -226,12 +247,28 @@
       "description": "Meister Hoshi zog Masolino und seine Brüder auf"
     },
     {
+      "source": "Parmigianino",
+      "target": "Bronzino",
+      "episode": 0,
+      "value": 4,
+      "id": "Brüder",
+      "description": "Bronzino und Parmigianino sind Brüder, die als Eier vor dem Kloster von Meister Hoshi aufgefunden wurden."
+    },
+    {
       "source": "Bronzino",
       "target": "Yamato Hoshi",
       "episode": 0,
       "value": 3,
       "id": "Ziehvater",
       "description": "Meister Hoshi zog Bronzino und seine Brüder auf"
+    },
+    {
+      "source": "Parmigianino",
+      "target": "Filippino",
+      "episode": 0,
+      "value": 4,
+      "id": "Brüder",
+      "description": "Filippino und Parmigianino sind Brüder, die als Eier vor dem Kloster von Meister Hoshi aufgefunden wurden."
     },
     {
       "source": "Filippino",
@@ -244,6 +281,8 @@
     {
       "source": "Bhavin",
       "target": "Alba",
+      "id": "Zufällige Begegnung",
+      "description": "Bhavin hat Alba im Stadtpark der Stadt des Riesen gesehen und schnell verstanden, dass die Elfe vermutlich die Person ist, nach der Jin sucht.",
       "episode": 12,
       "value": 1
     },
@@ -259,19 +298,41 @@
       "source": "Parmigianino",
       "target": "Smasher",
       "episode": 0,
-      "value": 2
+      "value": 2,
+      "id": "Rache",
+      "description": "Smasher ist für die Zerstörung von Ninos Kloster verantwortlich. Seit dem Vorfall wird Meister Hoshi vermisst und Nino hat Rache geschworen."
     },
     {
       "source": "Smasher",
       "target": "Kult der Maschinenmutter",
       "episode": 0,
-      "value": 2
+      "value": 2,
+      "id": "General",
+      "description": "Laserbeam ist einer der Anführer des Kults"
     },
     {
       "source": "Laserbeam",
       "target": "Kult der Maschinenmutter",
+      "id": "General",
+      "description": "Laserbeam ist einer der Anführer des Kults",
       "episode": 0,
       "value": 2
+    },
+    {
+      "source": "Laserbeam",
+      "target": "Wrakenberg",
+      "id": "Überfall",
+      "description": "Laserbeam hat versucht das Dorf Wrakenberg zu überfallen",
+      "episode": 3,
+      "value": 1
+    },
+    {
+      "source": "Tadamir",
+      "target": "Wrakenberg",
+      "id": "Bürgermeister",
+      "description": "Durch unlautere politische Tricks ist Tadamir zum reisenden Bürgermeister des Dorfes geworden.",
+      "episode": 5,
+      "value": 1
     },
     {
       "source": "Smasher",
@@ -283,7 +344,9 @@
       "source": "Bhavin",
       "target": "Jin",
       "episode": 0,
-      "value": 3
+      "value": 3,
+      "id": "Schicksalhafte Begegnung",
+      "description": "Bhavin ist seinem Geist gefolgt und hat dabei den beinahe toten Jin gefunden. Er hat es als Zeichen gedeutet, dass er Jin finden und das Leben retten sollte. Seitdem ist er mit ihm unterwegs, um zu erfahren, was das Schicksal mit ihm vorhat."
     },
     {
       "source": "Jin",
@@ -294,7 +357,7 @@
     {
       "source": "Tadamir",
       "target": "Leoric",
-      "episode": -1,
+      "episode": 0,
       "value": 4
     },
     {
@@ -388,6 +451,30 @@
       "target": "Gorev",
       "episode": 11,
       "value": 2
+    },
+    {
+      "source": "Loxxkatron",
+      "target": "Hauptmann David",
+      "episode": 10,
+      "value": 1
+    },
+    {
+      "source": "Tadamir",
+      "target": "Grace",
+      "episode": 18,
+      "value": 2
+    },
+    {
+      "source": "Bhavin",
+      "target": "Grace",
+      "episode": 12,
+      "value": 1
+    },
+    {
+      "source": "Parmigianino",
+      "target": "Grace",
+      "episode": 12,
+      "value": 1
     }
   ]
 }
