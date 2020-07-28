@@ -5,41 +5,71 @@
       "episode": 0,
       "group": 1,
       "isPlayer": true,
-      "description": "Tadamir ist ein menschlicher Barde, der in einer behüteten Familie mit vielen Geschwistern aufwuchs. Nachdem er bei einer gewaltsamen Revolution nicht nur die Liebe seines Lebens verlor, schwor er Rache und zog aus die Verantwortlichen zur Strecke zu bringen."
+      "description": "Tadamir ist ein menschlicher Barde, der in einer behüteten Familie mit vielen Geschwistern aufwuchs. Nachdem er bei einer gewaltsamen Revolution nicht nur die Liebe seines Lebens verlor, schwor er Rache und zog aus, um die Verantwortlichen zur Strecke zu bringen. "
     },
     {
       "id": "Jin",
       "episode": 0,
       "group": 1,
       "isPlayer": true,
-      "description": "Jin ist ein Changeling, der im Auftrag der Göttin Titania ruchlose Hexenmeister tötet, um das Gleichgewicht der Mächte wieder herzustellen."
+      "description": "Jin ist ein Changeling, der im Auftrag der Göttin Titania ruchlose Hexenmeister tötet, um das Gleichgewicht der Mächte wieder herzustellen. Er ist oft in der Gestalt einer alten Bekannten zu sehen."
     },
     {
       "id": "Parmigianino",
       "episode": 0,
       "group": 1,
       "isPlayer": true,
-      "description": "Spieler"
+      "description": "Meist 'Nino' genannt, ist ein drahtiger Tortle, der mit seinen Brüdern nach den Lehren des Daikoku-ten erzogen wurde."
     },
     {
       "id": "Orveyl",
       "episode": 0,
       "group": 1,
       "isPlayer": true,
-      "description": "Spieler"
+      "description": "Ein abenteuerlustiger Zentaure, der sich nach einigen Verlusten am Kult der Maschinenmutter rächen will."
     },
     {
       "id": "Bhavin",
       "episode": 0,
       "group": 1,
       "isPlayer": true,
-      "description": "Bhavin ist ein 42jähriger Kalashtar, der auf einer Hochebene aufgewachsen ist und die Magie der Wiederherstellung gelernt hat. Er wohnt mit seiner Frau und den Kindern auf einem Bauernhof in einem Wald. Als sein Wassergeist ihm den Auftrag gab Jin zu finden und zu folgen, begann für ihn das Abenteuer. <br/>Er ist gerne in der freien Natur, raucht Pfeife, trinkt gerne Fruchtsäfte und spielt gekonnt die Panflöte."
+      "description": "Bhavin ist ein Kalashtar, der auf einer Hochebene aufwuchs und die Magie der Wiederherstellung erlernte. Er wohnt mit seiner Frau und den Kindern auf einem Bauernhof in einem Wald. Als sein Wassergeist ihm den Auftrag gab Jin zu finden und zu folgen, begann für ihn das Abenteuer. <br/>Er ist gerne in der freien Natur, raucht Pfeife, trinkt gerne Fruchtsäfte und spielt gekonnt die Panflöte."
+    },
+    {
+      "id": "Koalak",
+      "group": 10,
+      "episode": 0,
+      "description": "Zentaurischer Schmied, der sich auch gut mit maschinellen Prothesen auskennt."
+    },
+    {
+      "id": "Yamato Hoshi",
+      "group": 6,
+      "episode": 0,
+      "description": "Lehrmeister des Daikoku-ten-Klosters"
+    },
+    {
+      "id": "Masolino",
+      "group": 6,
+      "episode": 0,
+      "description": "Ein kräftiger Tortle, der mit seinen Brüdern nach den Lehren des Daikoku-ten erzogen wurde."
+    },
+    {
+      "id": "Bronzino",
+      "group": 6,
+      "episode": 0,
+      "description": "Ein pfiffiger Tortle, der mit seinen Brüdern nach den Lehren des Daikoku-ten erzogen wurde."
+    },
+    {
+      "id": "Filippino",
+      "group": 6,
+      "episode": 0,
+      "description": "Ein vorlauter Tortle, der mit seinen Brüdern nach den Lehren des Daikoku-ten erzogen wurde."
     },
     {
       "id": "Alba",
       "group": 2,
       "episode": 14,
-      "description": "..."
+      "description": "Eine junge Elfe, die sich sehr für alte Sprachen interessiert."
     },
     {
       "id": "Falana",
@@ -57,26 +87,32 @@
       "id": "Kult der Maschinenmutter",
       "group": 3,
       "episode": 1,
-      "description": "Der Kult der Maschinenmutter",
+      "description": "Die Anhänger des Kults glauben an die Überlegenheit von Maschinen gegenüber lebenden Wesen. Sie glauben an das Recht des Stärkeren und überfallen ohne Gnade Dörfer und sogar Städte, wenn sie glauben dort interessante Maschinenteile zu erbeuten.",
       "isFaction": true
     },
     {
       "id": "Smasher",
       "group": 3,
       "episode": 6,
-      "description": "General im Kult der Maschinenmutter, dessen Arme aus hartem Metall bestehen"
+      "description": "General im Kult der Maschinenmutter. Er ist ein muskulöser, dunkelhäutiger Mann, dessen Arme ab den Schultern durch mechanische Arme ersetzt wurden. Mit diesen Armen ist er sogar in der Lage Steinwände zu durchschlagen, wie er bereits mehrfach unter Beweis stellte."
     },
     {
       "id": "Laserbeam",
       "group": 3,
       "episode": 3,
-      "description": "General im Kult der Maschinenmutter. Er ist ein großer, breitschultriger Mann mit langem blonden Haar und stechenden, grünen Augen. Sein Blick verrät den Wahnsinn der in seinem Kopf vorgeht, die Nase sieht aus als wäre sie schon mehrfach gebrochen worden.<br/> Während er seinen Dienern befehle zubrüllt, hüpft der glühende Punkt seiner Zigarette vor seinem Mund hin und her. Sein linker Arm ist von einem rostigen Metall ummantelt, dessen Ende wie ein kleines Kanonenrohr aussieht."
+      "description": "General im Kult der Maschinenmutter. Er ist ein großer, breitschultriger Mann mit langem blonden Haar und stechenden, grünen Augen. Sein Blick verrät den Wahnsinn der in seinem Kopf vorgeht, die Nase sieht aus als wäre sie schon mehrfach gebrochen worden. Sein linker Arm ist von einem glänzenden Metall ummantelt, dessen Ende wie ein kleines Kanonenrohr aussieht."
     },
     {
       "id": "Loxxkatron",
       "group": 4,
       "episode": 7,
-      "description": "Elfling"
+      "description": "Elfling, der angeblich vom Kult der Maschinenmutter gefangen genommen wurde und mit den Helden flüchtete. Die grüne Irokesenfrisur und sein Holzbein sind sehr auffällig."
+    },
+    {
+      "id": "Grace",
+      "group": 2,
+      "episode": 12,
+      "description": "Eine Gelehrte aus dem Süden, die zur Zeit Zuflucht in der Stadt des Riesen sucht. "
     },
     {
       "id": "Die Spielzeugsoldaten",
@@ -102,6 +138,12 @@
       "group": 4,
       "episode": 18,
       "description": "Gorevs rechte Hand. Eine junge Frau mit kurzen blonden Haaren, die fast immer ein schelmisches Grinsen aufgelegt hat."
+    },
+    {
+      "id": "Hauptmann David",
+      "group": 5,
+      "episode": 10,
+      "description": "David war Hauptmann der Stadtwache in der Stadt des Riesen und für das Stadttor verantwortlich."
     },
     {
       "id": "Liliana",
@@ -168,10 +210,50 @@
       "value": 1
     },
     {
+      "source": "Parmigianino",
+      "target": "Yamato Hoshi",
+      "episode": 0,
+      "value": 3,
+      "id": "Ziehvater",
+      "description": "Meister Hoshi zog Nino und seine Brüder auf"
+    },
+    {
+      "source": "Masolino",
+      "target": "Yamato Hoshi",
+      "episode": 0,
+      "value": 3,
+      "id": "Ziehvater",
+      "description": "Meister Hoshi zog Masolino und seine Brüder auf"
+    },
+    {
+      "source": "Bronzino",
+      "target": "Yamato Hoshi",
+      "episode": 0,
+      "value": 3,
+      "id": "Ziehvater",
+      "description": "Meister Hoshi zog Bronzino und seine Brüder auf"
+    },
+    {
+      "source": "Filippino",
+      "target": "Yamato Hoshi",
+      "episode": 0,
+      "value": 3,
+      "id": "Ziehvater",
+      "description": "Meister Hoshi zog Filippino und seine Brüder auf"
+    },
+    {
       "source": "Bhavin",
       "target": "Alba",
       "episode": 12,
       "value": 1
+    },
+    {
+      "source": "Orveyl",
+      "target": "Kult der Maschinenmutter",
+      "episode": 0,
+      "value": 1,
+      "id": "Rache",
+      "description": "Bei einem Zusammentreffen mit den Kultisten verlor Orveyl sein linkes Vorderbein und viele Freunde."
     },
     {
       "source": "Parmigianino",
@@ -286,6 +368,14 @@
       "target": "Lajak",
       "episode": 1,
       "value": 2
+    },
+    {
+      "source": "Orveyl",
+      "target": "Koalak",
+      "episode": 1,
+      "value": 2,
+      "id": "Alte Freunde",
+      "description": "Koalak half Orveyl nach dem Verlust seines Beins mit einer künstlichen Prothese"
     },
     {
       "source": "Tadamir",
