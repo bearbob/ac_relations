@@ -1,3 +1,7 @@
+body {
+  background: #212f3c;
+}
+
 .links line {
   stroke-opacity: 0.6;
 }
@@ -7,12 +11,35 @@ svg {
   font-size: 10px;
 }
 
-.hovertext {
-  background-color: white;
-  border: 0px solid black;
+a {
+  color: #f4d03f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f7dc6f ;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #f39c12;
+}
+
+#disclaimer {
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  padding: 10px;
   border-radius: 5px;
-  padding: 5px;
+  background: #145a32;
+  color: white;
+}
+
+.hovertext {
+  border-radius: 5px;
+  padding: 7px;
   position: absolute;
   max-width: 30%;
-  background: lightsteelblue;
+  background: #145a32;
+  color: white;
 }
