@@ -71,7 +71,7 @@ const getHoverFillColor = function(d) {
 const getHoverStrokeColor = function(d) {
   let sColor = COLOR(d.group);
   if(d.isFaction) {
-    sColor = 'black';
+    sColor = 'white';
   }
   return sColor;
 };
@@ -112,7 +112,7 @@ const mouseLeaveNode = function(context, element, tooltip) {
 };
 
 const mouseOverLink = function(context, element, tooltip) {
-  d3.select(context).style("stroke", "black");
+  d3.select(context).style("stroke", "white");
 
   let name = element.id? element.id : "???";
   name = element.source.id + ' & ' + element.target.id + ': ' + name;

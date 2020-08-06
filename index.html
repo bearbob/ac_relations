@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Adventure Corp - Season 4</title>
+    <link rel="shortcut icon" href="/ac_relations/static/favicon.ico" />
+    <link rel="stylesheet" href="/ac_relations/static/css/force-directed-graph.css">
+		<script type="text/javascript" src="/ac_relations/static/d3/d3.js"></script>
+    <script type="text/javascript" src="/ac_relations/static/graph/constants.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/ac_relations/static/graph/graph_utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/ac_relations/static/graph/graph.js" charset="utf-8"></script>
+  </head>
+
+  <body>
+    <div id="disclaimer">Alle Abenteuer auf <a href="https://tripletwenty.net">tripletwenty.net</a></div>
+    <div class="hovertext">Berühre einen Knoten oder eine Kante, um mehr Informationen zu sehen.</div>
+    <main id="diagram"></main>
+		<script type="text/javascript" charset="utf-8">buildGraph('/ac_relations/static/data/characters.json');</script>
+  </body>
+
+</html>
