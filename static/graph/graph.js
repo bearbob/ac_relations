@@ -1,3 +1,6 @@
+//some constants for the graph
+var svg;
+
 /**
  * @public
  *
@@ -7,7 +10,6 @@
 var buildGraph = function (sFile, episodeFilter) {
   episodeFilter = episodeFilter || 9999;
 
-  let svg;
   let simulation;
   let link;
   let group;
