@@ -85,19 +85,25 @@ const showTooltip = function(tooltip, name, description) {
 const resetTooltip = function(tooltip) {
   tooltip.html('Berühre einen Knoten oder eine Kante, um mehr Informationen zu sehen.');
   tooltip.style("left", "8px")
-          .style("top", "8px");
+         .style("top",  "8px");
 }
 
 /**
  * @param {object} node The node instant
  * @param {array} node.name
  * @param {string} node.id
+ * @param {number} episodeFilter
+ * @return {string}
  */
-const getName = function(node) {
+const getName = function(node, episodeFilter) {
   let name = node.id;
   if(node.names && node.names.length > 0) {
     let sortedNames = node.names.sort(function(a, b){ return a.episode - b.episode });
-    //TODO Add filter to filter the currently set episode
+    if(episodeFilter) {
+      //remove all names that are above the filter
+      sortedNames = sortedNames.filter(name => name.episode <= episodeFilter);
+    }
+    name = sortedNames[0].name;
   }
   if(node.isFaction) {
     name = '['+name+']';
@@ -116,8 +122,8 @@ const mouseOverNode = function(context, element, tooltip) {
     .style('stroke', getHoverStrokeColor(element))
     .style('fill', getHoverFillColor(element))
     .style("opacity", 1);
-  let name = element.id? element.id : "???";
-  let description = element.description? element.description : "???";
+  let name = element.id ? getName(element) : "???";
+  let description = element.description ? element.description : "???";
   showTooltip(tooltip, name, description);
 };
 

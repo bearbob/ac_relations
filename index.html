@@ -15,8 +15,22 @@
   <body>
     <div id="disclaimer">Alle Abenteuer auf <a href="https://tripletwenty.net">tripletwenty.net</a></div>
     <div class="hovertext">Berühre einen Knoten oder eine Kante, um mehr Informationen zu sehen.</div>
+    <div class="slidecontainer">
+      <div id="episodefilter">Episode: </div><div id="episodevalue"></div>
+      <input type="range" min="1" max="30" value="13" class="slider" id="episodeFilter">
+    </div>
     <main id="diagram"></main>
-		<script type="text/javascript" charset="utf-8">buildGraph('/ac_relations/static/data/characters.json');</script>
+    <script type="text/javascript" charset="utf-8">
+      var slider = document.getElementById("episodeFilter");
+      var output = document.getElementById("episodevalue");
+      output.innerHTML = slider.value; // Display the default slider value
+      // Update the current slider value (each time you drag the slider handle)
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+        //TODO Update graph
+      }
+      buildGraph('/ac_relations/static/data/characters.json');
+    </script>
   </body>
 
 </html>

@@ -79,6 +79,12 @@
     },
     {
       "id": "Leoric",
+      "names": [
+        {
+          "name": "Der Barde",
+          "episode": 0
+        }
+      ],
       "group": 2,
       "episode": 0,
       "description": "Ein berühmter Barde und Wanderer, der oft ohne Ziel und Karte unterwegs war"

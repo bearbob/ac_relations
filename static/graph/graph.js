@@ -6,7 +6,6 @@
  */
 var buildGraph = function (sFile, episodeFilter) {
   episodeFilter = episodeFilter || 9999;
-  //TODO Implement episode filter
 
   let svg;
   let simulation;
@@ -187,7 +186,7 @@ var buildGraph = function (sFile, episodeFilter) {
       group.append('text')
         .attr('transform', 'translate(11, 0) rotate(0)')
         .text(function (d, i) {
-          return getName(d);
+          return getName(d, episodeFilter);
         })
         .attr('font-weight', function (d, i) {
           if(d.isFaction) {
