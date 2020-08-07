@@ -110,6 +110,12 @@
     },
     {
       "id": "Grace",
+      "names": [
+        {
+          "name": "Die alte Frau",
+          "episode": 12
+        }
+      ],
       "group": 2,
       "episode": 12,
       "description": "Eine Gelehrte aus dem Süden, die zur Zeit Zuflucht in der Stadt des Riesen sucht. "

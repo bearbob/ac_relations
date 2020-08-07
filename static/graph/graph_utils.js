@@ -89,6 +89,23 @@ const resetTooltip = function(tooltip) {
 }
 
 /**
+ * @param {object} node The node instant
+ * @param {array} node.name
+ * @param {string} node.id
+ */
+const getName = function(node) {
+  let name = node.id;
+  if(node.names && node.names.length > 0) {
+    let sortedNames = node.names.sort(function(a, b){ return a.episode - b.episode });
+    //TODO Add filter to filter the currently set episode
+  }
+  if(node.isFaction) {
+    name = '['+name+']';
+  }
+  return name;
+};
+
+/**
  *
  * @param {object} context The current execution context
  * @param {object} element The node element object

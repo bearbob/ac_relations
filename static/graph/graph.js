@@ -187,11 +187,7 @@ var buildGraph = function (sFile, episodeFilter) {
       group.append('text')
         .attr('transform', 'translate(11, 0) rotate(0)')
         .text(function (d, i) {
-          let name = d.id;
-          if(d.isFaction) {
-            name = '['+name+']';
-          }
-          return name;
+          return getName(d);
         })
         .attr('font-weight', function (d, i) {
           if(d.isFaction) {
@@ -202,8 +198,8 @@ var buildGraph = function (sFile, episodeFilter) {
         //add a white outline to the text
         .clone(true).lower()
         .attr("fill", "none")
-        .attr("stroke", "white")
-        .attr("stroke-width", 3);
+        .attr('stroke', 'white')
+        .attr("stroke-width", 4);
 
       // realtime engine
       simulation
