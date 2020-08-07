@@ -29,7 +29,7 @@
         output.innerHTML = this.value;
         //Update graph, as a dirty workaround just delete the old graph and rebuild from scratch
         document.getElementById("diagram").innerHTML = "";
-        buildGraph('/data/characters.json', this.value);
+        buildGraph('/ac_relations/static/data/characters.json', this.value);
       }
       buildGraph('/ac_relations/static/data/characters.json');
     </script>
