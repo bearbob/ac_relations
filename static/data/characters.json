@@ -5,7 +5,7 @@
       "episode": 0,
       "group": 1,
       "isPlayer": true,
-      "description": "Tadamir ist ein menschlicher Barde, der in einer behüteten Familie mit vielen Geschwistern aufwuchs. Nachdem er bei einer gewaltsamen Revolution nicht nur die Liebe seines Lebens verlor, schwor er Rache und zog aus, um die Verantwortlichen zur Strecke zu bringen. "
+      "description": "Tadamir ist ein menschlicher Barde, der in einer behüteten Familie mit vielen Geschwistern aufwuchs."
     },
     {
       "id": "Jin",
@@ -70,6 +70,18 @@
       "group": 2,
       "episode": 14,
       "description": "Eine junge Elfe, die sich sehr für alte Sprachen interessiert."
+    },
+    {
+      "id": "Osmonias",
+      "names": [
+        {
+          "name": "???",
+          "episode": 16
+        }
+      ],
+      "group": 2,
+      "episode": 16,
+      "description": "???"
     },
     {
       "id": "Falana",
@@ -495,6 +507,14 @@
       "value": 1,
       "id": "Sterbehilfe",
       "description": "Jin hat Clint seine Hilfe angeboten, falls er sterben wollte. Clint hat das Angebot ausgeschlagen und sich kurz darauf erschossen."
+    },
+    {
+      "source": "Alba",
+      "target": "Osmonias",
+      "episode": 16,
+      "value": 1,
+      "id": "Spurensuche",
+      "description": "Auf der Suche nach altem Wissen ist Alba auf eine Spur zu einem der Alten gestoßen."
     }
   ]
 }

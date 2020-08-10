@@ -79,13 +79,13 @@ const getHoverStrokeColor = function(d) {
 const showTooltip = function(tooltip, name, description) {
   tooltip.html('<b>' + name + '</b><br/> ' + description);
   tooltip.style("left", (d3.event.pageX + 10) + "px")
-          .style("top", (d3.event.pageY + 20) + "px");
+          .style("top", (d3.event.pageY + 20) + "px")
+          .style("opacity", "1");
 }
 
 const resetTooltip = function(tooltip) {
   tooltip.html('Berühre einen Knoten oder eine Kante, um mehr Informationen zu sehen.');
-  tooltip.style("left", "8px")
-         .style("top",  "8px");
+  tooltip.style("opacity", "0");
 }
 
 /**
