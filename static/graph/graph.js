@@ -22,6 +22,8 @@ var buildGraph = function (sFile, episodeFilter) {
       .attr('height', canvas.height)
       .attr('viewbox', canvas.viewbox.x + ' ' + canvas.viewbox.y + ' ' + canvas.viewbox.width + ' ' + canvas.viewbox.height)
       .call(d3.zoom()
+        .extent([[0, 0], [canvas.width, canvas.height]])
+        .scaleExtent([1, 8])
         .on("zoom", function () {
           svg.attr("transform", d3.event.transform)
         })

@@ -1,11 +1,11 @@
 const canvas = {
-  width: 1100,
-  height: 600,
+  width: window.innerWidth - 100,
+  height: window.innerHeight - 50,
   viewbox: {
     x: 0,
     y: 0,
-    width: 800,
-    height: 500
+    width: window.innerWidth - 100,
+    height: window.innerHeight - 50
   },
   padding: {
     top: 20,
@@ -105,7 +105,7 @@ const getName = function(node, episodeFilter) {
     }
     name = sortedNames[0].name;
   }
-  if(node.isFaction) {
+  if (node.isFaction) {
     name = '['+name+']';
   }
   return name;
