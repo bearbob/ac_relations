@@ -12,22 +12,25 @@ var buildGraph = function (sFile, episodeFilter) {
 
   let simulation;
   let link;
+  let node;
   let group;
-  let groupData;
 
   const setCanvas = function (contextSelector) {
     svg = d3.select(contextSelector)
       .append('svg')
       .attr('width', canvas.width)
       .attr('height', canvas.height)
-      .attr('viewbox', canvas.viewbox.x + ' ' + canvas.viewbox.y + ' ' + canvas.viewbox.width + ' ' + canvas.viewbox.height)
+      .attr('viewbox', canvas.viewbox)
       .call(d3.zoom()
         .extent([[0, 0], [canvas.width, canvas.height]])
         .scaleExtent([1, 8])
         .on("zoom", function () {
-          svg.attr("transform", d3.event.transform)
+          //TODO find the right element to transform
+          //link.attr("transform", d3.event.transform);
+          svg.attr("transform", d3.event.transform);
         })
-      )
+      );
+
   };
 
   // Define the div for the tooltip
@@ -146,7 +149,7 @@ var buildGraph = function (sFile, episodeFilter) {
         })
 
       // building the nodes by circles
-      groupData = svg.selectAll()
+      let groupData = svg.selectAll()
         .data(graph.nodes);
 
       group = groupData.enter()
@@ -154,7 +157,7 @@ var buildGraph = function (sFile, episodeFilter) {
         .attr('class', 'nodes')
         .attr('transform', 'translate(' + (0) + ',' + (0) + ') rotate(0)');
 
-      let node = group
+      node = group
         .append('circle')
         .attr('r', function (d) {
           //make player and faction nodes slightly larger

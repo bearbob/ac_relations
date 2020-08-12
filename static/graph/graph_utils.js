@@ -1,12 +1,12 @@
 const canvas = {
   width: window.innerWidth - 100,
   height: window.innerHeight - 50,
-  viewbox: {
-    x: 0,
-    y: 0,
-    width: window.innerWidth - 100,
-    height: window.innerHeight - 50
-  },
+  viewbox: [
+    0,
+    0,
+    window.innerWidth - 100,
+    window.innerHeight - 50
+  ],
   padding: {
     top: 20,
     right: 20,
