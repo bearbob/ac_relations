@@ -95,7 +95,7 @@ const getRecentValue = function (element, episodeFilter) {
     });
     if(episodeFilter) {
       //remove all names that are above the filter
-      element = element.filter(descr => descr.episode <= episodeFilter);
+      element = element.filter(a => a.episode <= episodeFilter);
     }
     element = element[0].text;
   }
@@ -111,9 +111,8 @@ const getRecentValue = function (element, episodeFilter) {
  */
 const getName = function(node, episodeFilter) {
   let name = node.id;
-  let arrName = getRecentValue(node.names, episodeFilter);
-  if(arrName) {
-    name = arrName;
+  if(node.names && node.names.length > 0) {
+    name = getRecentValue(node.names, episodeFilter);
   }
   if (node.isFaction) {
     name = '['+name+']';

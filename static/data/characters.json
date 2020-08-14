@@ -84,7 +84,7 @@
       "id": "Osmonias",
       "names": [
         {
-          "name": "???",
+          "text": "???",
           "episode": 16
         }
       ],
@@ -102,7 +102,7 @@
       "id": "Leoric",
       "names": [
         {
-          "name": "Der Barde",
+          "text": "Der Barde",
           "episode": 0
         }
       ],
@@ -139,7 +139,7 @@
       "id": "Grace",
       "names": [
         {
-          "name": "Die alte Frau",
+          "text": "Die alte Frau",
           "episode": 12
         }
       ],
