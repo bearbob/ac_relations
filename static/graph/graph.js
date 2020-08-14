@@ -142,7 +142,9 @@ var buildGraph = function (sFile, episodeFilter) {
           return 6;
         })
         .on("mouseover", function(d) {
-          mouseOverLink(this, d, d3.select(".hovertext"));
+          mouseOverLink(this, d, d3.select(".hovertext"), {
+            episodeFilter: episodeFilter
+          });
         })
         .on("mouseleave", function(d) {
           mouseLeaveLink(this, d, d3.select(".hovertext"));

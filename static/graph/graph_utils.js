@@ -61,7 +61,7 @@ const getFillColor = function(d) {
 };
 
 const getHoverFillColor = function(d) {
-  let sColor = 'white';
+  let sColor = STROKE.hoverNodeFill;
   if(d.isFaction) {
     sColor = COLOR(d.group);
   }
@@ -71,7 +71,7 @@ const getHoverFillColor = function(d) {
 const getHoverStrokeColor = function(d) {
   let sColor = COLOR(d.group);
   if(d.isFaction) {
-    sColor = 'white';
+    sColor = STROKE.hoverFactionStroke;
   }
   return sColor;
 };
@@ -159,10 +159,10 @@ const mouseLeaveNode = function(context, element, tooltip) {
 };
 
 const mouseOverLink = function(context, element, tooltip, params) {
-  d3.select(context).style("stroke", "white");
+  d3.select(context).style("stroke", STROKE.hoverLink);
 
   let name = element.id? element.id : "???";
-  name = element.source.id + ' & ' + element.target.id + ': ' + name;
+  name = getName(element.source, params.episodeFilter) + ' & ' + getName(element.target, params.episodeFilter) + ': ' + name;
   //TODO new description with episodeFilter
   let description = element.description? element.description : "???";
   showTooltip(tooltip, name, description);
