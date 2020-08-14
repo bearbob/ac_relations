@@ -88,6 +88,20 @@ const resetTooltip = function(tooltip) {
   tooltip.style("opacity", "0");
 }
 
+const getRecentValue = function (element, episodeFilter) {
+  if(Array.isArray(element)) {
+    element.sort(function(a, b){
+      return b.episode - a.episode;
+    });
+    if(episodeFilter) {
+      //remove all names that are above the filter
+      element = element.filter(descr => descr.episode <= episodeFilter);
+    }
+    element = element[0].text;
+  }
+  return element;
+}
+
 /**
  * @param {object} node The node instant
  * @param {array} node.name
@@ -97,13 +111,9 @@ const resetTooltip = function(tooltip) {
  */
 const getName = function(node, episodeFilter) {
   let name = node.id;
-  if(node.names && node.names.length > 0) {
-    let sortedNames = node.names.sort(function(a, b){ return a.episode - b.episode });
-    if(episodeFilter) {
-      //remove all names that are above the filter
-      sortedNames = sortedNames.filter(name => name.episode <= episodeFilter);
-    }
-    name = sortedNames[0].name;
+  let arrName = getRecentValue(node.names, episodeFilter);
+  if(arrName) {
+    name = arrName;
   }
   if (node.isFaction) {
     name = '['+name+']';
@@ -112,18 +122,33 @@ const getName = function(node, episodeFilter) {
 };
 
 /**
+ * @param {object} node The node instant
+ * @param {string/array} node.description
+ * @param {number} episodeFilter
+ * @return {string}
+ */
+const getDescription = function(node, episodeFilter) {
+  let description = node.description;
+  if(!description) {
+    description = '???';
+  }
+  description = getRecentValue(description, episodeFilter);
+  return description;
+};
+
+/**
  *
  * @param {object} context The current execution context
  * @param {object} element The node element object
  * @param {object} tooltip The element where the tooltip will be displayed
  */
-const mouseOverNode = function(context, element, tooltip) {
+const mouseOverNode = function(context, element, tooltip, params) {
   d3.select(context)
     .style('stroke', getHoverStrokeColor(element))
     .style('fill', getHoverFillColor(element))
     .style("opacity", 1);
-  let name = element.id ? getName(element) : "???";
-  let description = element.description ? element.description : "???";
+  let name = element.id ? getName(element, params.episodeFilter) : "???";
+  let description = getDescription(element, params.episodeFilter);
   showTooltip(tooltip, name, description);
 };
 
@@ -134,11 +159,12 @@ const mouseLeaveNode = function(context, element, tooltip) {
   resetTooltip(tooltip);
 };
 
-const mouseOverLink = function(context, element, tooltip) {
+const mouseOverLink = function(context, element, tooltip, params) {
   d3.select(context).style("stroke", "white");
 
   let name = element.id? element.id : "???";
   name = element.source.id + ' & ' + element.target.id + ': ' + name;
+  //TODO new description with episodeFilter
   let description = element.description? element.description : "???";
   showTooltip(tooltip, name, description);
 };

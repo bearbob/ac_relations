@@ -69,7 +69,16 @@
       "id": "Alba",
       "group": 2,
       "episode": 14,
-      "description": "Eine junge Elfe, die sich sehr für alte Sprachen interessiert."
+      "description": [
+        {
+          "text": "Eine junge Elfe, die sich sehr für alte Sprachen interessiert.",
+          "episode": 14
+        },
+        {
+          "text": "Ein gestaltwandelnder Hexenmeister, der angeblich im Namen Titanias handelt.",
+          "episode": 16
+        }
+      ]
     },
     {
       "id": "Osmonias",
@@ -515,6 +524,14 @@
       "value": 1,
       "id": "Spurensuche",
       "description": "Auf der Suche nach altem Wissen ist Alba auf eine Spur zu einem der Alten gestoßen."
+    },
+    {
+      "source": "Alba",
+      "target": "Gorev",
+      "episode": 20,
+      "value": 1,
+      "id": "Deal",
+      "description": "Um den Riesen zu erwecken, ist Alba einen Deal mit Gorev eingegangen."
     }
   ]
 }

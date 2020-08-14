@@ -178,7 +178,9 @@ var buildGraph = function (sFile, episodeFilter) {
         })
         .attr('fill', getFillColor)
         .on("mouseover", function(d) {
-          mouseOverNode(this, d, d3.select(".hovertext"));
+          mouseOverNode(this, d, d3.select(".hovertext"), {
+            episodeFilter: episodeFilter
+          });
         })
         .on("mouseleave", function(d) {
           mouseLeaveNode(this, d, d3.select(".hovertext"));
