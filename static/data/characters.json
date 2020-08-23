@@ -141,11 +141,28 @@
         {
           "text": "Die alte Frau",
           "episode": 12
+        },
+        {
+          "text": "Grace",
+          "episode": 20
         }
       ],
       "group": 2,
       "episode": 12,
-      "description": "Eine Gelehrte aus dem Süden, die zur Zeit Zuflucht in der Stadt des Riesen sucht. "
+      "description": [
+        {
+          "text": "Eine alte Frau, die als Flüchtlin im Stadtpark in der Stadt des Riesen lebt",
+          "episode": 12
+        },
+        {
+          "text": "Eine Gelehrte aus dem Süden, die zur Zeit Zuflucht in der Stadt des Riesen sucht. ",
+          "episode": 15
+        },
+        {
+          "text": "Eine Gelehrte aus Tinka, die zur Zeit Zuflucht in der Stadt des Riesen sucht. Sie kennt sich mit der vergessenen Schrift aus.",
+          "episode": 18
+        }
+      ]
     },
     {
       "id": "Die Spielzeugsoldaten",
@@ -532,6 +549,14 @@
       "value": 1,
       "id": "Deal",
       "description": "Um den Riesen zu erwecken, ist Alba einen Deal mit Gorev eingegangen."
+    },
+    {
+      "source": "Tadamir",
+      "target": "Gorev",
+      "episode": 20,
+      "value": 4,
+      "id": "Blutpakt",
+      "description": "Tadamir ist einen Blutpakt mit Gorev eingegangen, um gegen den Kult der Maschinenmutter in den Kampf zu ziehen."
     }
   ]
 }
