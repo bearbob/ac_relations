@@ -119,7 +119,7 @@ var buildGraph = function (sFile, episodeFilter) {
         .force('x', d3.forceX())
         .force('y', d3.forceY())
         .force('charge', d3.forceManyBody()
-          .strength(-300)
+          .strength(-400)
         )
         .force('center', d3.forceCenter(canvas.width / 2, canvas.height / 2));
 

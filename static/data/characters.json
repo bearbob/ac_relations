@@ -237,6 +237,13 @@
       "isFaction": true,
       "episode": 2,
       "description": "Ein kleines Dorf, das beinahe Opfer des Kults der Maschinenmutter geworden wäre."
+    },
+    {
+      "id": "Tinka",
+      "group": 13,
+      "isFaction": true,
+      "episode": 18,
+      "description": "Eine große Nation im Süden. Einst ein Königreich, wurde es durch eine blutige Revolution zur Republik und ist heute Ursprung des Kults der Maschinenmutter."
     }
   ],
   "links": [
@@ -557,6 +564,22 @@
       "value": 4,
       "id": "Blutpakt",
       "description": "Tadamir ist einen Blutpakt mit Gorev eingegangen, um gegen den Kult der Maschinenmutter in den Kampf zu ziehen."
+    },
+    {
+      "source": "Tadamir",
+      "target": "Tinka",
+      "episode": 18,
+      "value": 1,
+      "id": "Heimat",
+      "description": "Tadamir ist in Tinka geboren und aufgewachsen."
+    },
+    {
+      "source": "Grace",
+      "target": "Tinka",
+      "episode": 18,
+      "value": 1,
+      "id": "Heimat",
+      "description": "Grace war früher Gelehrte am Hof von Tinka."
     }
   ]
 }

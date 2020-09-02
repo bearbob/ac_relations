@@ -39,6 +39,6 @@ const STROKE = {
   Player: 'black',
   default: 'black',
   hoverLink: 'black',
-  hoverNodeFill: 'grey',
+  hoverNodeFill: 'black',
   hoverFactionStroke: 'black',
 };
