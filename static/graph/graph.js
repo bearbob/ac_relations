@@ -26,8 +26,9 @@ var buildGraph = function (sFile, episodeFilter) {
         .scaleExtent([1, 8])
         .on("zoom", function () {
           //TODO find the right element to transform
-          //link.attr("transform", d3.event.transform);
-          svg.attr("transform", d3.event.transform);
+          //link.attr("transform", event.transform);
+          svg.attr("transform", "translate(" + event.translate + ")" + " scale(" + event.scale + ")");
+          //svg.attr("transform", event.transform);
         })
       );
 
@@ -39,7 +40,7 @@ var buildGraph = function (sFile, episodeFilter) {
     .style("opacity", 0);
 
   function dragstarted(d) {
-    if (!d3.event.active) {
+    if (!event.active) {
       simulation.alphaTarget(0.3).restart();
     }
     d.fx = d.x;
@@ -47,12 +48,12 @@ var buildGraph = function (sFile, episodeFilter) {
   }
 
   function dragged(d) {
-    d.fx = d3.event.x;
-    d.fy = d3.event.y;
+    d.fx = event.x;
+    d.fy = event.y;
   }
 
   function dragended(d) {
-    if (!d3.event.active) {
+    if (!event.active) {
       simulation.alphaTarget(0);
     }
     d.fx = null;
@@ -99,14 +100,7 @@ var buildGraph = function (sFile, episodeFilter) {
       });
 
       // count links per name and save as object
-      let graphLinksCount = d3.nest()
-        .key(function (d) {
-          return d.source;
-        })
-        .rollup(function (v) {
-          return v.length;
-        })
-        .object(graph.links);
+      let graphLinksCount = d3.group(graph.links, d => d.source);
 
 
       simulation = d3.forceSimulation()

@@ -78,8 +78,8 @@ const getHoverStrokeColor = function(d) {
 
 const showTooltip = function(tooltip, name, description) {
   tooltip.html('<b>' + name + '</b><br/> ' + description);
-  tooltip.style("left", (d3.event.pageX + 10) + "px")
-          .style("top", (d3.event.pageY + 20) + "px")
+  tooltip.style("left", (event.pageX + 10) + "px")
+          .style("top", (event.pageY + 20) + "px")
           .style("opacity", "1");
 }
 
