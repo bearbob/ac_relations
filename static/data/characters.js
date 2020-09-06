@@ -33,7 +33,7 @@ const raw_data = {
       "episode": 0,
       "group": 1,
       "isPlayer": true,
-      "description": "Bhavin ist ein Kalashtar, der auf einer Hochebene aufwuchs und die Magie der Wiederherstellung erlernte. Er wohnt mit seiner Frau und den Kindern auf einem Bauernhof in einem Wald. Als sein Wassergeist ihm den Auftrag gab Jin zu finden und zu folgen, begann für ihn das Abenteuer. <br/>Er ist gerne in der freien Natur, raucht Pfeife, trinkt gerne Fruchtsäfte und spielt gekonnt die Panflöte."
+      "description": "Bhavin ist ein Kalashtar, der auf einer Hochebene aufwuchs und die Magie der Wiederherstellung erlernte. Er wohnt mit seiner Frau und den Kindern auf einem Bauernhof in einem Wald. Als sein Wassergeist ihm den Auftrag gab Jin zu finden und zu folgen, begann für ihn das Abenteuer. Er ist gerne in der freien Natur, raucht Pfeife, trinkt gerne Fruchtsäfte und spielt gekonnt die Panflöte."
     },
     {
       "id": "Koalak",
@@ -347,7 +347,7 @@ const raw_data = {
       "source": "Orveyl",
       "target": "Kult der Maschinenmutter",
       "episode": 0,
-      "value": 1,
+      "value": 2,
       "id": "Rache",
       "description": "Bei einem Zusammentreffen mit den Kultisten verlor Orveyl sein linkes Vorderbein und viele Freunde."
     },
@@ -593,6 +593,19 @@ const getFormattedData = function() {
   raw_data.nodes.forEach(character => {
     character.label = character.id;
     character.id = identifier;
+    //TODO Linebreak and determining which description to use
+    let regExLineBreak = /\. /gi;
+    character.title = character.description;
+    if(typeof character.title == 'string') {
+      character.title = character.title.replace(regExLineBreak, '. <br/>');
+    }
+    if (character.isPlayer) {
+      character.borderWidth = 3;
+      character.borderWidthSelected = 4;
+    }
+    if (character.isFaction) {
+      character.shape = 'box';
+    }
     nodes.push(character);
 
     mapping[character.label] = identifier;
@@ -603,7 +616,12 @@ const getFormattedData = function() {
     let edge = {
       from: mapping[link.source],
       to: mapping[link.target],
+      label: link.id,
+      title: link.description,
     };
+    if(link.value === 1) {
+      edge.dashes = true;
+    }
 
     edges.push(edge);
   });
