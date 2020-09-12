@@ -19,6 +19,19 @@ var buildGraph = function () {
     nodes: nodes,
     edges: edges
   };
-  var options = {};
+  var options = {
+    groups: {
+      Tinka: {
+        color: {
+          background:'#ffd166',
+          border:'#cca751',
+          highlight: {
+            background:'#ffda84',
+            border:'#cca751'
+          }
+        },
+      }
+    }
+  };
   var network = new vis.Network(container, data, options);
 };

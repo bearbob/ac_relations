@@ -240,10 +240,16 @@ const raw_data = {
     },
     {
       "id": "Tinka",
-      "group": 13,
+      "group": "Tinka",
       "isFaction": true,
       "episode": 18,
       "description": "Eine große Nation im Süden. Einst ein Königreich, wurde es durch eine blutige Revolution zur Republik und ist heute Ursprung des Kults der Maschinenmutter."
+    },
+    {
+      "id": "David Friedensbringer",
+      "group": "Tinka",
+      "episode": 21,
+      "description": "Ehemaliger Anführer der blutigen Revolution von Tinka."
     }
   ],
   "links": [
@@ -263,6 +269,7 @@ const raw_data = {
       "episode": 16,
       "value": 3
     },
+    /*
     {
       "source": "Tadamir",
       "target": "Alba",
@@ -279,6 +286,7 @@ const raw_data = {
       "episode": 12,
       "value": 1
     },
+    */
     {
       "source": "Parmigianino",
       "target": "Yamato Hoshi",
@@ -335,11 +343,21 @@ const raw_data = {
       "id": "Ziehvater",
       "description": "Meister Hoshi zog Filippino und seine Brüder auf"
     },
+    /*
     {
       "source": "Bhavin",
       "target": "Alba",
       "id": "Zufällige Begegnung",
       "description": "Bhavin hat Alba im Stadtpark der Stadt des Riesen gesehen und schnell verstanden, dass die Elfe vermutlich die Person ist, nach der Jin sucht.",
+      "episode": 12,
+      "value": 1
+    },
+    */
+    {
+      "source": "Grace",
+      "target": "Alba",
+      "id": "Neugier",
+      "description": "Alba hat Grace in der Stadt des Riesen aufgesucht. Sie ließ sich von ihr bei der Übersetzung eines alten Buches helfen.",
       "episode": 12,
       "value": 1
     },
@@ -580,6 +598,22 @@ const raw_data = {
       "value": 1,
       "id": "Heimat",
       "description": "Grace war früher Gelehrte am Hof von Tinka."
+    },
+    {
+      "source": "David Friedensbringer",
+      "target": "Tinka",
+      "episode": 21,
+      "value": 2,
+      "id": "Heimat",
+      "description": "David ist in Tinka geborgen und war Teil der Regierung der Republik."
+    },
+    {
+      "source": "David Friedensbringer",
+      "target": "Orveyl",
+      "episode": 21,
+      "value": 1,
+      "id": "Symbol",
+      "description": "David will Orveyl zum Symbol des Widerstands gegen den Kult machen."
     }
   ]
 };
