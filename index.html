@@ -9,13 +9,13 @@
 		<script type="text/javascript" src="/ac_relations/static/lib/vis-network.min.js"></script>
     <script type="text/javascript" src="/ac_relations/static/data/characters.js" charset="utf-8"></script>
     <script type="text/javascript" src="/ac_relations/static/graph/graph.js" charset="utf-8"></script>
-    <style type="text/css">
-      #mynetwork {
-        width: 100%;
-        height: 800px;
-        border: 1px solid lightgray;
+    <!-- iOS optimization -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script type="text/javascript">
+      document.ontouchmove = function(event){
+        event.preventDefault();
       }
-    </style>
+    </script>
   </head>
 
   <body>
