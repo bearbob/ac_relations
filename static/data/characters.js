@@ -86,11 +86,24 @@ const raw_data = {
         {
           "text": "???",
           "episode": 16
+        },
+        {
+          "text": "Osmonias",
+          "episode": 21
         }
       ],
       "group": 2,
       "episode": 16,
-      "description": "???"
+      "description": [
+        {
+          "text": "???",
+          "episode": 16
+        },
+        {
+          "text": "Einer der alten Maschinenpriester, Schöpfer des Riesens.",
+          "episode": 21
+        }
+      ]
     },
     {
       "uid": "Falana",
@@ -618,6 +631,14 @@ const raw_data = {
       "value": 1,
       "uid": "Symbol",
       "description": "David will Orveyl zum Symbol des Widerstands gegen den Kult machen."
+    },
+    {
+      "source": "Tadamir",
+      "target": "Osmonias",
+      "episode": 21,
+      "value": 3,
+      "uid": "Retter",
+      "description": "Tadamir glaubt, dass er vom Maschinenpriester wieder zum Leben erweckt wurde."
     }
   ]
 };
