@@ -1,3 +1,19 @@
+var nMode = 0;
+var network;
+
+function changeMode() {
+  var p = document.getElementById("mode");
+  network.destroy();
+
+  nMode = (nMode+1)%2;
+  if(nMode) {
+    p.innerHTML = "Mode: Feed";
+    buildGraph(17);
+  } else {
+    p.innerHTML = "Mode: Patreon";
+    buildGraph(999);
+  }
+};
 
 const getFormattedData = function(nEpisode) {
   nEpisode = nEpisode || 999;
@@ -114,5 +130,5 @@ const buildGraph = function (nCurrentEpisode) {
       }
     }
   };
-  var network = new vis.Network(container, data, options);
+  network = new vis.Network(container, data, options);
 };

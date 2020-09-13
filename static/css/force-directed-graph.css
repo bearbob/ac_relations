@@ -7,12 +7,6 @@ body {
   stroke-opacity: 0.6;
 }
 
-svg {
-  font-family: Menlo, monospace;
-  font-size: 10px;
-  z-index: -50;
-}
-
 a {
   color: #f4d03f;
   text-decoration: none;
@@ -29,6 +23,7 @@ a:visited {
 
 #disclaimer {
   position: fixed;
+  z-index: 100;
   right: 5px;
   bottom: 5px;
   padding: 10px;
@@ -38,61 +33,25 @@ a:visited {
   border: 3px solid black;
 }
 
-.hovertext {
+#mode {
+  position: fixed;
+  z-index: 100;
+  left: 5px;
+  bottom: 5px;
+  padding: 10px;
   border-radius: 5px;
-  padding: 7px;
-  position: absolute;
-  max-width: 30%;
   background: #0f4526;
   color: white;
   border: 3px solid black;
 }
 
-.slidecontainer {
-  -webkit-appearance: none;
-  position: fixed;
-  bottom: 8px;
-  width: 50%;
-  color: black;
-  display: flex;
-  flex-direction: row;
+#mode:hover {
+  background: #186f3d;
+  cursor: pointer;
 }
 
-#episodefilter {
-  margin-right: 10px;
-}
-
-#episodevalue {
-  margin-right: 10px;
-  width: 30px;
-}
-
-.slider {
-  -webkit-appearance: none;
+#mynetwork {
   width: 100%;
-  height: 15px;
-  border-radius: 5px;
-  background: #145a32;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #f4d03f;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #f4d03f;
-  cursor: pointer;
+  height: 800px;
+  border: 1px solid lightgray;
 }
