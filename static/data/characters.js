@@ -269,6 +269,18 @@ const raw_data = {
       "group": "Tinka",
       "episode": 21,
       "description": "Ehemaliger Anführer der blutigen Revolution von Tinka."
+    },
+    {
+      "uid": "Julius zu Schwarzquell",
+      "group": "Tinka",
+      "episode": 22,
+      "description": "König von Tinka."
+    },
+    {
+      "uid": "Alina zu Schwarzquell",
+      "group": "Tinka",
+      "episode": 22,
+      "description": "Schwester des Königs von Tinka."
     }
   ],
   "links": [
@@ -639,6 +651,22 @@ const raw_data = {
       "value": 3,
       "uid": "Retter",
       "description": "Tadamir glaubt, dass er vom Maschinenpriester wieder zum Leben erweckt wurde."
+    },
+    {
+      "source": "Alina zu Schwarzquell",
+      "target": "Julius zu Schwarzquell",
+      "episode": 22,
+      "value": 3,
+      "uid": "Geschwister",
+      "description": "Das königliche Geschwisterpaar von Tinka"
+    },
+    {
+      "source": "David Friedensbringer",
+      "target": "Julius zu Schwarzquell",
+      "episode": 22,
+      "value": 3,
+      "uid": "Sturz",
+      "description": "Durch die Revolution von Tinka stürzte David den König"
     }
   ]
 };
