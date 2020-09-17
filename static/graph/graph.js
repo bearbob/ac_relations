@@ -1,4 +1,4 @@
-var nMode = 0;
+var nMode = 1;
 var network;
 
 function changeMode() {
@@ -50,10 +50,11 @@ const getFormattedData = function(nEpisode) {
         character.title = character.title.replace(regExLineBreak, '. <br/>');
       }
       if (character.isPlayer) {
-        character.shape = 'circle';
+        character.shape = 'box';
       }
       if (character.isFaction) {
-        character.shape = 'box';
+        character.shape = 'hexagon';
+        character.size = 30;
       }
       nodes.push(character);
 

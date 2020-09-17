@@ -1,6 +1,13 @@
 const raw_data = {
   "nodes": [
     {
+      "uid": "Adventure Corp",
+      "episode": 0,
+      "group": 1,
+      "isFaction": true,
+      "description": "Eine mutige Gruppe wackerer Helden."
+    },
+    {
       "uid": "Tadamir",
       "episode": 0,
       "group": 1,
@@ -271,19 +278,49 @@ const raw_data = {
       "description": "Ehemaliger Anführer der blutigen Revolution von Tinka."
     },
     {
-      "uid": "Julius zu Schwarzquell",
+      "uid": "König Julius",
       "group": "Tinka",
       "episode": 22,
-      "description": "König von Tinka."
+      "description": "Julius zu Schwarzquell, König von Tinka."
     },
     {
-      "uid": "Alina zu Schwarzquell",
+      "uid": "Alina",
       "group": "Tinka",
       "episode": 22,
-      "description": "Schwester des Königs von Tinka."
+      "description": "Alina zu Schwarzquell, Schwester des Königs von Tinka."
     }
   ],
   "links": [
+    {
+      "source": "Jin",
+      "target": "Adventure Corp",
+      "episode": 0,
+      "value": 4
+    },
+    {
+      "source": "Tadamir",
+      "target": "Adventure Corp",
+      "episode": 0,
+      "value": 4
+    },
+    {
+      "source": "Orveyl",
+      "target": "Adventure Corp",
+      "episode": 0,
+      "value": 4
+    },
+    {
+      "source": "Parmigianino",
+      "target": "Adventure Corp",
+      "episode": 0,
+      "value": 4
+    },
+    {
+      "source": "Bhavin",
+      "target": "Adventure Corp",
+      "episode": 0,
+      "value": 4
+    },
     {
       "source": "Jin",
       "target": "Falana",
@@ -453,6 +490,12 @@ const raw_data = {
       "value": 1
     },
     {
+      "source": "Adventure Corp",
+      "target": "Gorev",
+      "episode": 11,
+      "value": 1
+    },
+    {
       "source": "Die Spielzeugsoldaten",
       "target": "Gorev",
       "episode": 11,
@@ -569,18 +612,6 @@ const raw_data = {
       "value": 2
     },
     {
-      "source": "Bhavin",
-      "target": "Grace",
-      "episode": 12,
-      "value": 1
-    },
-    {
-      "source": "Parmigianino",
-      "target": "Grace",
-      "episode": 12,
-      "value": 1
-    },
-    {
       "source": "Jin",
       "target": "Clint",
       "episode": 9,
@@ -653,16 +684,23 @@ const raw_data = {
       "description": "Tadamir glaubt, dass er vom Maschinenpriester wieder zum Leben erweckt wurde."
     },
     {
-      "source": "Alina zu Schwarzquell",
-      "target": "Julius zu Schwarzquell",
+      "source": "Alina",
+      "target": "König Julius",
       "episode": 22,
       "value": 3,
       "uid": "Geschwister",
       "description": "Das königliche Geschwisterpaar von Tinka"
     },
     {
+      "source": "Tinka",
+      "target": "König Julius",
+      "episode": 22,
+      "value": 2,
+      "uid": "König"
+    },
+    {
       "source": "David Friedensbringer",
-      "target": "Julius zu Schwarzquell",
+      "target": "König Julius",
       "episode": 22,
       "value": 3,
       "uid": "Sturz",
