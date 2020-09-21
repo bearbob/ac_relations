@@ -7,10 +7,10 @@ function changeMode() {
 
   nMode = (nMode+1)%2;
   if(nMode) {
-    p.innerHTML = "Mode: Feed";
+    p.innerHTML = "<ion-icon name=\"swap-horizontal-outline\"></ion-icon> Mode: Feed";
     buildGraph(17);
   } else {
-    p.innerHTML = "Mode: Patreon";
+    p.innerHTML = "<ion-icon name=\"swap-horizontal-outline\"></ion-icon> Mode: Patreon";
     buildGraph(999);
   }
 };
