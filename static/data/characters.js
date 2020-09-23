@@ -144,6 +144,12 @@ const raw_data = {
       "description": "General im Kult der Maschinenmutter. Er ist ein muskulöser, dunkelhäutiger Mann, dessen Arme ab den Schultern durch mechanische Arme ersetzt wurden. Mit diesen Armen ist er sogar in der Lage Steinwände zu durchschlagen, wie er bereits mehrfach unter Beweis stellte."
     },
     {
+      "uid": "Hammerhead",
+      "group": 3,
+      "episode": 19,
+      "description": "Generalin im Kult der Maschinenmutter."
+    },
+    {
       "uid": "Laserbeam",
       "group": 3,
       "episode": 3,
@@ -288,6 +294,12 @@ const raw_data = {
       "group": "Tinka",
       "episode": 22,
       "description": "Alina zu Schwarzquell, Schwester des Königs von Tinka."
+    },
+    {
+      "uid": "Abraham",
+      "group": 5,
+      "episode": 19,
+      "description": "Ein alter Mann, der in der Stadt des Riesen lebt und eine Saftpresse besitzt."
     }
   ],
   "links": [
@@ -442,6 +454,13 @@ const raw_data = {
       "value": 2
     },
     {
+      "source": "Hammerhead",
+      "target": "Kult der Maschinenmutter",
+      "uid": "General",
+      "episode": 19,
+      "value": 2
+    },
+    {
       "source": "Laserbeam",
       "target": "Wrakenberg",
       "uid": "Überfall",
@@ -499,7 +518,8 @@ const raw_data = {
       "source": "Die Spielzeugsoldaten",
       "target": "Gorev",
       "episode": 11,
-      "value": 2
+      "uid": "Boss",
+      "value": 3
     },
     {
       "source": "Die Spielzeugsoldaten",
@@ -518,6 +538,19 @@ const raw_data = {
       "target": "Ton",
       "episode": 11,
       "value": 2
+    },
+    {
+      "source": "Die Spielzeugsoldaten",
+      "target": "Abraham",
+      "uid": "Mitglied",
+      "episode": 19,
+      "value": 1
+    },
+    {
+      "source": "Adventure Corp",
+      "target": "Abraham",
+      "episode": 19,
+      "value": 1
     },
     {
       "source": "Sandra",
