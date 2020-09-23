@@ -571,12 +571,6 @@ const raw_data = {
       "value": 3
     },
     {
-      "source": "Ton",
-      "target": "Gorev",
-      "episode": 12,
-      "value": 3
-    },
-    {
       "source": "Bhavin",
       "target": "Ton",
       "episode": 12,
