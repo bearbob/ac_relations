@@ -264,6 +264,18 @@ const raw_data = {
       "description": "Ein verbitterter alter Mann, der allein in einem vom Kult der Maschinenmutter zerstörten Dorf lebt."
     },
     {
+      "uid": "Lukas",
+      "group": 11,
+      "episode": 27,
+      "description": "Der letzte Pilot von F-21B"
+    },
+    {
+      "uid": "Marie",
+      "group": 11,
+      "episode": 27,
+      "description": "Die geliebte von Lukas"
+    },
+    {
       "uid": "Wrakenberg",
       "group": 13,
       "isFaction": true,
@@ -300,6 +312,18 @@ const raw_data = {
       "group": 5,
       "episode": 19,
       "description": "Ein alter Mann, der in der Stadt des Riesen lebt und eine Saftpresse besitzt."
+    },
+    {
+      "uid": "Roger",
+      "group": 23,
+      "episode": 24,
+      "description": "Ein Frosch, der im Rostwald lebt."
+    },
+    {
+      "uid": "Agatha",
+      "group": 23,
+      "episode": 31,
+      "description": "Die Hexe des Rostwaldes in der Gestalt einer jungen Frau."
     }
   ],
   "links": [
@@ -571,6 +595,13 @@ const raw_data = {
       "value": 3
     },
     {
+      "source": "Sandra",
+      "target": "Alba",
+      "uid": "Mord",
+      "episode": 29,
+      "value": 1
+    },
+    {
       "source": "Bhavin",
       "target": "Ton",
       "episode": 12,
@@ -645,6 +676,18 @@ const raw_data = {
       "value": 1,
       "uid": "Sterbehilfe",
       "description": "Jin hat Clint seine Hilfe angeboten, falls er sterben wollte. Clint hat das Angebot ausgeschlagen und sich kurz darauf erschossen."
+    },
+    {
+      "source": "Jin",
+      "target": "Lukas",
+      "episode": 27,
+      "value": 1
+    },
+    {
+      "source": "Marie",
+      "target": "Lukas",
+      "episode": 27,
+      "value": 3
     },
     {
       "source": "Alba",
@@ -732,6 +775,30 @@ const raw_data = {
       "value": 3,
       "uid": "Sturz",
       "description": "Durch die Revolution von Tinka stürzte David den König"
+    },
+    {
+      "source": "Agatha",
+      "target": "Bhavin",
+      "episode": 31,
+      "value": 1
+    },
+    {
+      "source": "Roger",
+      "target": "Bhavin",
+      "episode": 24,
+      "value": 1
+    },
+    {
+      "source": "Agatha",
+      "target": "Parmigianino",
+      "episode": 31,
+      "value": 1
+    },
+    {
+      "source": "Agatha",
+      "target": "Jin",
+      "episode": 31,
+      "value": 1
     }
   ]
 };
