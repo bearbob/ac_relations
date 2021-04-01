@@ -8,7 +8,7 @@ function changeMode() {
   nMode = (nMode+1)%2;
   if(nMode) {
     p.innerHTML = "<ion-icon name=\"swap-horizontal-outline\"></ion-icon> Mode: Feed";
-    buildGraph(17);
+    buildGraph(30);
   } else {
     p.innerHTML = "<ion-icon name=\"swap-horizontal-outline\"></ion-icon> Mode: Patreon";
     buildGraph(999);
